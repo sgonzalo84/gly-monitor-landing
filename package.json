@@ -1,0 +1,24 @@
+{
+  "name": "gly-monitor-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run build:css\" \"npm run serve\"",
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "serve": "live-server src --port=3000",
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "keywords": [],
+  "author": "Santiago Gonzalo",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.1.18"
+  }
+}

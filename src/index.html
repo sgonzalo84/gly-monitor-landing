@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GlyMonitor - Gestión de Diabetes Simplificada</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased font-sans"
+  >
+    <nav
+      class="fixed w-full z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex-shrink-0 flex items-center gap-2">
+            <span class="material-icons-round text-primary text-3xl"
+              >medical_services</span
+            >
+            <span
+              class="font-display font-bold text-xl tracking-tight text-gray-900 dark:text-white"
+              >Gly<span class="text-primary">Monitor</span></span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
+              href="#features"
+              >Funciones</a
+            >
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
+              href="#story"
+              >Historia</a
+            >
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
+              href="#recipes"
+              >Recetas</a
+            >
+            <a
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
+              href="#contact"
+              >Contacto</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+              id="theme-toggle"
+            >
+              <span
+                class="material-icons-round hidden"
+                id="theme-toggle-dark-icon"
+                >dark_mode</span
+              >
+              <span
+                class="material-icons-round hidden"
+                id="theme-toggle-light-icon"
+                >light_mode</span
+              >
+            </button>
+            <a
+              class="hidden md:inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30"
+              href="https://gly-monitor.web.app/login"
+            >
+              Comenzar ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+      >
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-accent-blue dark:bg-accent-blue-dark text-blue-800 dark:text-blue-100 text-xs font-semibold tracking-wide uppercase mb-6"
+        >
+          Ahora en Beta Abierta
+        </span>
+        <h1
+          class="text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 dark:text-white mb-6"
+        >
+          Gestión de la diabetes, <br class="hidden md:block" />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600"
+            >simplificada.</span
+          >
+        </h1>
+        <p
+          class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
+        >
+          Calculadora de bolo inteligente y monitoreo en tiempo real. Diseñado
+          para ayudarte a ti o a tus seres queridos a vivir con tranquilidad.
+        </p>
+        <div class="mt-10 flex justify-center gap-4">
+          <a
+            class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+            href="https://gly-monitor.web.app/login"
+          >
+            Comenzar gratis
+          </a>
+          <a
+            class="inline-flex items-center justify-center px-8 py-3 border border-gray-200 dark:border-gray-700 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-surface-light dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+            href="#how-it-works"
+          >
+            Cómo funciona
+          </a>
+        </div>
+        <div class="mt-16 relative mx-auto max-w-5xl">
+          <div
+            class="rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden relative"
+          >
+            <div
+              class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 flex items-center justify-between"
+            >
+              <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+              <div
+                class="h-4 bg-gray-200 dark:bg-gray-600 rounded-full w-32"
+              ></div>
+            </div>
+            <div class="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="md:col-span-2 space-y-4">
+                <div class="flex justify-between items-end mb-6">
+                  <div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                      Glucosa actual
+                    </div>
+                    <div
+                      class="text-4xl font-display font-bold text-gray-900 dark:text-white"
+                    >
+                      104
+                      <span class="text-lg font-normal text-gray-500"
+                        >mg/dL</span
+                      >
+                      <span
+                        class="material-icons-round text-green-500 text-3xl align-bottom"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div
+                      class="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm font-medium"
+                    >
+                      En Rango
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="h-48 w-full bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900/20 dark:to-transparent rounded-lg border border-blue-100 dark:border-blue-900/30 relative overflow-hidden"
+                >
+                  <svg class="w-full h-full" preserveAspectRatio="none">
+                    <path
+                      d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75 V150 H0 Z"
+                      fill="rgba(14, 165, 233, 0.2)"
+                    ></path>
+                    <path
+                      d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75"
+                      fill="none"
+                      stroke="#0EA5E9"
+                      stroke-width="3"
+                    ></path>
+                    <line
+                      stroke="#EAB308"
+                      stroke-dasharray="4"
+                      stroke-width="1"
+                      x1="0"
+                      x2="500"
+                      y1="30"
+                      y2="30"
+                    ></line>
+                    <line
+                      stroke="#EF4444"
+                      stroke-dasharray="4"
+                      stroke-width="1"
+                      x1="0"
+                      x2="500"
+                      y1="120"
+                      y2="120"
+                    ></line>
+                  </svg>
+                </div>
+                <div class="flex justify-between text-xs text-gray-400 mt-2">
+                  <span>00:00</span>
+                  <span>06:00</span>
+                  <span>12:00</span>
+                  <span>18:00</span>
+                  <span>24:00</span>
+                </div>
+              </div>
+              <div
+                class="space-y-4 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-8"
+              >
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+                  Eventos de Hoy
+                </h3>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-primary flex-shrink-0"
+                  >
+                    <span class="material-icons-round text-sm">restaurant</span>
+                  </div>
+                  <div>
+                    <div
+                      class="text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Almuerzo
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      Plátano, 20g HC
+                    </div>
+                  </div>
+                  <div
+                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                  >
+                    11:30
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 flex-shrink-0"
+                  >
+                    <span class="material-icons-round text-sm">vaccines</span>
+                  </div>
+                  <div>
+                    <div
+                      class="text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Insulina
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      1.5 UD Rápida
+                    </div>
+                  </div>
+                  <div
+                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                  >
+                    10:15
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 flex-shrink-0"
+                  >
+                    <span class="material-icons-round text-sm">water_drop</span>
+                  </div>
+                  <div>
+                    <div
+                      class="text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Lectura
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      100 mg/dL
+                    </div>
+                  </div>
+                  <div
+                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                  >
+                    08:00
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 overflow-hidden pointer-events-none"
+      >
+        <div
+          class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 dark:bg-primary/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob"
+        ></div>
+        <div
+          class="absolute top-0 right-1/4 w-96 h-96 bg-blue-200 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000"
+        ></div>
+      </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section
+      class="animate-enter py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
+      id="story"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div class="lg:w-1/2 order-2 lg:order-1">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 dark:bg-gray-800"
+            >
+              <img
+                alt="Developer coding on a laptop with a warm cup of coffee, representing the dedication behind GlyMonitor"
+                class="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDrQ_X_YSwOk3YWewpnaJPcZwTq07t5tQkHnxG_bP6kfUnig_6oe4QVLfBtA7a7D_HVqU_wLTGDmgF7blJIX2iYCTHsNVY-OPGVUkqf10Y0gq1-KRMpEr0TadC9BPoH6-fuFAaOlYV3xcSyUh0A0Uh-SEP15luCn0ghN1baopbNZuyg57TXAsZzOqN6mTuax3dCkOaaGpMIE0XM0-vZX2aW4PhHeLR7oAH5Qe4F3Upa3_jWIj2C2DQ5RCbgj14sX9GZOWoRoc120"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8"
+              >
+                <p class="text-white font-medium italic">
+                  "Comenzó con una sola línea de código para ayudar a un amigo."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 order-1 lg:order-2">
+            <span
+              class="text-primary font-semibold tracking-wide uppercase text-sm"
+              >Nuestra Misión</span
+            >
+            <h2
+              class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
+            >
+              De una promesa personal a una herramienta pública.
+            </h2>
+            <div
+              class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              <p>
+                Hace seis años, a la hija de un amigo cercano le diagnosticaron
+                Diabetes Tipo 1. Verlos luchar con notas dispersas, cálculos
+                complejos y noches sin dormir fue desgarrador.
+              </p>
+              <p>
+                Construí la primera versión de GlyMonitor solo para ellos: una
+                herramienta simple para calcular bolos y registrar comidas.
+                Cambió sus vidas.
+              </p>
+              <p>
+                Hoy, GlyMonitor ha evolucionado en una plataforma integral.
+                Creemos que manejar la diabetes no debería ser un trabajo a
+                tiempo completo. Debería ser simple, preciso y accesible para
+                todos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section
+      class="py-20 bg-background-light dark:bg-background-dark relative"
+      id="features"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
+          >
+            Todo lo que necesitas para mantenerte en rango
+          </h2>
+          <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+            Herramientas completas empaquetadas en una interfaz limpia y
+            minimalista.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 text-primary"
+            >
+              <span class="material-icons-round text-2xl">edit_note</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Registro Inteligente
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Registra comidas, insulina y niveles de glucosa sin esfuerzo.
+              Nuestras sugerencias inteligentes aprenden de tu historial para
+              hacer el registro más rápido que nunca.
+            </p>
+          </div>
+       
+          <div
+            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400"
+            >
+              <span class="material-icons-round text-2xl">insights</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Analíticas Avanzadas
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Visualiza tu variabilidad, tiempo en rango y tendencias. Gráficos
+              hermosos te ayudan a entender cómo diferentes alimentos afectan tu
+              cuerpo.
+            </p>
+          </div>
+       
+          <div
+            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
+            >
+              <span class="material-icons-round text-2xl">sync</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Integraciones
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Conéctate directamente con tus dispositivos CGM como Dexcom y
+              LibreLink. Ve tus datos en tiempo real junto con tus registros
+              automáticamente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipes -->
+    <section
+      class="animate-enter py-20 bg-white dark:bg-surface-dark overflow-hidden"
+      id="recipes"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-12"
+        >
+          <div class="md:w-1/2 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-gray-800 text-primary text-sm font-semibold shadow-sm"
+            >
+              <span class="material-icons-round text-sm">restaurant_menu</span>
+              Libro de Recetas
+            </div>
+            <h2
+              class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white"
+            >
+              Conteo de carbohidratos, conquistado.
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              Crea y guarda tus recetas favoritas. GlyMonitor calcula
+              automáticamente los carbohidratos totales y la información
+              nutricional por porción, para que nunca tengas que adivinar de
+              nuevo.
+            </p>
+            <ul class="space-y-3 mt-4">
+              <li
+                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+              >
+                <span class="material-icons-round text-green-500"
+                  >check_circle</span
+                >
+                <span>Guarda comidas personalizadas como "Lasaña de mamá"</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+              >
+                <span class="material-icons-round text-green-500"
+                  >check_circle</span
+                >
+                <span>Ajusta tamaños de porción al instante</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+              >
+                <span class="material-icons-round text-green-500"
+                  >check_circle</span
+                >
+                <span>Base de datos de ingredientes comunes</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2 relative">
+            <div
+              class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-6 max-w-sm mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500 border border-gray-100 dark:border-gray-700"
+            >
+              <div class="flex justify-between items-center mb-4">
+                <h4 class="font-bold text-lg dark:text-white">
+                  Avena con Chía
+                </h4>
+                <span class="material-icons-round text-gray-400"
+                  >expand_less</span
+                >
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-6">
+                <div
+                  class="bg-pink-50 dark:bg-pink-900/20 p-3 rounded-lg text-center"
+                >
+                  <div class="text-xs text-gray-500 dark:text-gray-400">
+                    Carbohidratos
+                  </div>
+                  <div class="text-xl font-bold text-gray-900 dark:text-white">
+                    38.5 g
+                  </div>
+                </div>
+                <div
+                  class="bg-pink-50 dark:bg-pink-900/20 p-3 rounded-lg text-center"
+                >
+                  <div class="text-xs text-gray-500 dark:text-gray-400">
+                    Raciones
+                  </div>
+                  <div class="text-xl font-bold text-gray-900 dark:text-white">
+                    3.8
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div
+                  class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
+                >
+                  <span class="text-gray-600 dark:text-gray-300"
+                    >Avena, cruda</span
+                  >
+                  <span class="font-medium text-gray-900 dark:text-white"
+                    >50g</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
+                >
+                  <span class="text-gray-600 dark:text-gray-300"
+                    >Leche, semidesnatada</span
+                  >
+                  <span class="font-medium text-gray-900 dark:text-white"
+                    >50g</span
+                  >
+                </div>
+                <div class="flex justify-between text-sm pb-1">
+                  <span class="text-gray-600 dark:text-gray-300"
+                    >Semillas de chía</span
+                  >
+                  <span class="font-medium text-gray-900 dark:text-white"
+                    >5g</span
+                  >
+                </div>
+              </div>
+              <div class="mt-6 flex gap-3">
+                <button
+                  class="flex-1 py-2 rounded-full border border-gray-200 dark:border-gray-600 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white"
+                >
+                  Editar
+                </button>
+                <button
+                  class="flex-1 py-2 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark shadow-md shadow-primary/30"
+                >
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section
+      class="py-20 bg-background-light dark:bg-background-dark"
+      id="how-it-works"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+          >
+            Cómo funciona
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div
+            class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-200 dark:bg-gray-700 -z-10 w-2/3 mx-auto left-0 right-0"
+          ></div>
+
+          <div
+            class="animate-enter-left text-center relative bg-background-light dark:bg-background-dark px-4"
+          >
+            <div
+              class="w-24 h-24 bg-surface-light dark:bg-surface-dark border-4 border-white dark:border-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10"
+            >
+              <span class="text-4xl font-bold text-primary">1</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              Conecta tu sensor
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Sincroniza tu dispositivo CGM o ingresa manualmente tus comidas y
+              lecturas de glucosa en segundos.
+            </p>
+          </div>
+
+          <div
+            class="animate-enter-left text-center relative bg-background-light dark:bg-background-dark px-4"
+          >
+            <div
+              class="w-24 h-24 bg-surface-light dark:bg-surface-dark border-4 border-white dark:border-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10"
+            >
+              <span class="text-4xl font-bold text-primary">2</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              Registra comidas
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Nuestros algoritmos procesan tus datos para mostrar patrones,
+              tiempo en rango y variabilidad.
+            </p>
+          </div>
+
+          <div
+            class="animate-enter-left text-center relative bg-background-light dark:bg-background-dark px-4"
+          >
+            <div
+              class="w-24 h-24 bg-surface-light dark:bg-surface-dark border-4 border-white dark:border-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative z-10"
+            >
+              <span class="text-4xl font-bold text-primary">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              Recibe recomendaciones
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Utiliza información para ajustar tus hábitos y dosis de insulina
+              con confianza y tranquilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="py-20 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800"
+      id="testimonials"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+          >
+            Lo que dice nuestra comunidad
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+          >
+            <span
+              class="material-icons-round text-primary/20 text-6xl absolute top-4 left-4 -z-0"
+              >format_quote</span
+            >
+            <div class="relative z-10">
+              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                "La calculadora de bolos ha cambiado el juego para los almuerzos
+                de mi hija. Mucho menos estrés."
+              </p>
+              <div class="flex items-center gap-3">
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                    Sarah Jenkins
+                  </h4>
+                  <span
+                    class="inline-block mt-1 px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium"
+                    >Usuaria por 1 año</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+          >
+            <span
+              class="material-icons-round text-primary/20 text-6xl absolute top-4 left-4 -z-0"
+              >format_quote</span
+            >
+            <div class="relative z-10">
+              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                "Finalmente, una interfaz que no se siente como un libro de
+                texto médico. Es limpia y realmente útil."
+              </p>
+              <div class="flex items-center gap-3">
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                    David Chen
+                  </h4>
+                  <span
+                    class="inline-block mt-1 px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium"
+                    >Usuario por 6 meses</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+          >
+            <span
+              class="material-icons-round text-primary/20 text-6xl absolute top-4 left-4 -z-0"
+              >format_quote</span
+            >
+            <div class="relative z-10">
+              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                "La función de recetas me ahorra mucho tiempo cada día. No puedo
+                imaginarme volver atrás."
+              </p>
+              <div class="flex items-center gap-3">
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
+                    Elena Rodriguez
+                  </h4>
+                  <span
+                    class="inline-block mt-1 px-2 py-0.5 rounded bg-pink-50 dark:bg-primary/10 text-primary dark:text-primary-dark text-xs font-medium"
+                    >Usuaria por 2 años</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
+      id="contact"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
+        >
+          <div class="text-center mb-10">
+            <h2
+              class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+            >
+              Ayúdanos a mejorar
+            </h2>
+            <p class="mt-4 text-gray-600 dark:text-gray-400">
+              GlyMonitor está construido para la comunidad. ¿Tienes alguna
+              sugerencia o solicitud de función? Nos encantaría escucharte.
+            </p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  for="name"
+                  >Nombre</label
+                >
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                  id="name"
+                  placeholder="Tu nombre"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                  id="email"
+                  placeholder="tu@ejemplo.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                for="message"
+                >Feedback</label
+              >
+              <textarea
+                class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                id="message"
+                placeholder="Cuéntanos cómo podemos mejorar..."
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1"
+                type="button"
+              >
+                Enviar Feedback
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800"
+      id="download-app"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
+          >
+            Descarga la APP
+          </h2>
+          <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+            Gestiona tu diabetes sobre la marcha con nuestras aplicaciones
+            móviles.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto"
+        >
+          <div
+            class="bg-blue-50 dark:bg-blue-900/10 rounded-2xl p-8 lg:p-12 flex flex-col items-center justify-center text-center border border-blue-100 dark:border-blue-800 transition-transform hover:scale-[1.02] duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center shadow-md mb-6 text-green-600"
+            >
+              <span class="material-icons-round text-4xl">android</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Android
+            </h3>
+            <div class="hidden md:flex flex-col items-center space-y-4">
+              <div class="bg-white p-3 rounded-xl shadow-sm">
+                <img
+                  alt="Scan to download Android App"
+                  class="w-32 h-32 opacity-90"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyw50sHoWKveN9LsJe7VkCTzAssB2fA1Gc1nYDURgK6vJ823NJjmXsfiWYyYRB0JImP5XU_Ix-ae4it3etOcDFBYGJUGi2O2stjMSgyRbTR0wDr3nWNn3EVkTKxElCluln5hPFdXEmOGCu_8CE2eI90OTb5amJUNdHY-Lk6-8obePZCAxFuc7mlnbCnUnySiUuYQ2ntD8s1gHS4BQAStQfIsODIfguFdBbcKtTyZEAq8Qj1MyRFYGAesMiunegkHAoVnPIGfc7R_I"
+                />
+              </div>
+              <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                >Escanea para descargar</span
+              >
+            </div>
+            <div class="md:hidden w-full max-w-xs mt-4">
+              <a
+                class="flex items-center justify-center gap-3 bg-black text-white px-4 py-3 rounded-xl shadow-lg hover:bg-gray-800 transition-colors w-full"
+                href="#"
+              >
+                <span class="material-icons-round text-3xl">shop</span>
+                <div class="text-left">
+                  <div class="text-[10px] uppercase tracking-wide opacity-80">
+                    Get it on
+                  </div>
+                  <div class="text-lg font-bold leading-none font-sans">
+                    Google Play
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-blue-50 dark:bg-blue-900/10 rounded-2xl p-8 lg:p-12 flex flex-col items-center justify-center text-center border border-blue-100 dark:border-blue-800 transition-transform hover:scale-[1.02] duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center shadow-md mb-6 text-gray-900 dark:text-white"
+            >
+              <span class="material-icons-round text-4xl">phone_iphone</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              iOS (Web App)
+            </h3>
+            <p
+              class="text-gray-600 dark:text-gray-400 mb-8 text-sm max-w-xs mx-auto"
+            >
+              Instala como Progressive Web App (PWA) para la mejor experiencia
+              en iPhone.
+            </p>
+            <div class="grid grid-cols-3 gap-2 w-full max-w-sm">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-surface-dark rounded-xl flex items-center justify-center shadow-sm text-blue-500 mb-2"
+                >
+                  <span class="material-icons-round text-xl md:text-2xl"
+                    >explore</span
+                  >
+                </div>
+                <span
+                  class="text-xs text-gray-500 dark:text-gray-400 font-medium"
+                  >1. Safari</span
+                >
+              </div>
+              <div class="flex flex-col items-center relative">
+                <div
+                  class="w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-surface-dark rounded-xl flex items-center justify-center shadow-sm text-blue-500 mb-2"
+                >
+                  <span class="material-icons-round text-xl md:text-2xl"
+                    >ios_share</span
+                  >
+                </div>
+                <span
+                  class="text-xs text-gray-500 dark:text-gray-400 font-medium"
+                  >2. Compartir</span
+                >
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-surface-dark rounded-xl flex items-center justify-center shadow-sm text-blue-500 mb-2"
+                >
+                  <span class="material-icons-round text-xl md:text-2xl"
+                    >add_box</span
+                  >
+                </div>
+                <span
+                  class="text-xs text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap"
+                  >3. Agregar a la pantalla de inicio</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center">
+          <a
+            class="inline-block px-6 py-2 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm md:text-base font-medium border border-gray-100 dark:border-gray-700 hover:text-primary dark:hover:text-primary transition-colors"
+            href="https://gly-monitor.web.app/login"
+          >
+            Accede desde cualquier lugar y sincroniza tus datos en tiempo real.
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 pt-16 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="material-icons-round text-primary text-2xl"
+                >medical_services</span
+              >
+              <span
+                class="font-display font-bold text-xl text-gray-900 dark:text-white"
+                >Gly<span class="text-primary">Monitor</span></span
+              >
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Empoderando a familias e individuos para manejar la diabetes con
+              confianza y claridad.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-4">
+              Producto
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Funciones</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Integraciones</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Precios</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Actualizaciones</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-4">
+              Empresa
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Sobre nosotros</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Historia</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Carreras</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Política de Privacidad</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-4">
+              Conectar
+            </h4>
+            <div class="flex space-x-4">
+              <a
+                class="text-gray-400 hover:text-primary transition-colors"
+                href="#"
+              >
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-gray-400 hover:text-primary transition-colors"
+                href="#"
+              >
+                <span class="sr-only">GitHub</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p
+            class="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left"
+          >
+            © 2024 GlyMonitor. No es consejo médico. Consulta siempre a tu
+            doctor.
+          </p>
+          <div
+            class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-500 dark:text-gray-400"
+          >
+            <a class="hover:text-primary" href="#">Términos</a>
+            <a class="hover:text-primary" href="#">Privacidad</a>
+            <a class="hover:text-primary" href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="theme-selector.js"></script>
+    <script src="scroll-manager.js"></script>
+  </body>
+</html>
