@@ -4,18 +4,46 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>GlyMonitor - Gestión de Diabetes Simplificada</title>
+    <!-- DNS Prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+
+    <!-- Preconnect para recursos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Cargar fuentes con display=swap y solo los pesos necesarios -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Preload de Material Icons -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Preload de Estilos -->
+    <link
+      rel="preload"
+      href="./output.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+        rel="stylesheet"
+      />
+      <link href="./output.css" rel="stylesheet" />
+    </noscript>
   </head>
   <body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased font-sans"
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased font-sans overflow-x-hidden"
   >
     <nav
       class="fixed w-full z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300"
@@ -388,7 +416,7 @@
               hacer el registro más rápido que nunca.
             </p>
           </div>
-       
+
           <div
             class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
           >
@@ -406,7 +434,7 @@
               cuerpo.
             </p>
           </div>
-       
+
           <div
             class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
           >

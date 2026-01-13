@@ -1,17 +1,16 @@
 {
   "name": "gly-monitor-landing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "GlyMonitor Landing Page",
+  "main": "index.html",
   "scripts": {
     "dev": "concurrently \"npm run build:css\" \"npm run serve\"",
     "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "serve": "live-server src --port=3000",
     "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
   },
-  "keywords": [],
+  "keywords": ["Diabetes", "Glucemia"],
   "author": "Santiago Gonzalo",
-  "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
