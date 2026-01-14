@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>GlyMonitor - Gestión de Diabetes Simplificada</title>
+    <title>Gestión de la diabetes y control de insulina | GlyMonitor</title>
+    <meta
+      name="description"
+      content="Calcula la insulina para tus comidas. Registra dosis, glucosa y comidas, guarda recetas y visualiza tu evolución con gráficos y calendario."
+    />
+
     <!-- DNS Prefetch para recursos externos -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -26,20 +31,14 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
 
-    <!-- Preload de Estilos -->
-    <link
-      rel="preload"
-      href="./output.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <noscript>
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
         rel="stylesheet"
       />
-      <link href="./output.css" rel="stylesheet" />
     </noscript>
   </head>
   <body
@@ -51,9 +50,15 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
           <div class="flex-shrink-0 flex items-center gap-2">
-            <span class="material-icons-round text-primary text-3xl"
+            <!-- <span class="material-icons-round text-primary text-3xl"
               >medical_services</span
-            >
+            > -->
+            <img
+              alt="Logo de GlyMonitor"
+              class="object-cover w-auto h-8"
+              src="./assets/logo/icon-72x72.png"
+              loading="eager"
+            />
             <span
               class="font-display font-bold text-xl tracking-tight text-gray-900 dark:text-white"
               >Gly<span class="text-primary">Monitor</span></span
@@ -62,22 +67,22 @@
           <div class="hidden md:flex space-x-8 items-center">
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#features"
-              >Funciones</a
+              href="#functionalidades"
+              >Funcionalidades</a
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#story"
-              >Historia</a
+              href="#historia"
+              >Nuestra historia</a
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#recipes"
-              >Recetas</a
+              href="#descargar-app"
+              >Descargar app</a
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#contact"
+              href="#contacto"
               >Contacto</a
             >
           </div>
@@ -97,17 +102,17 @@
                 >light_mode</span
               >
             </button>
-            <a
+            <!-- <a
               class="hidden md:inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30"
               href="https://gly-monitor.web.app/login"
             >
               Comenzar ahora
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
     </nav>
-    <!-- HERO SECTION -->
+    <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
@@ -126,12 +131,14 @@
             >simplificada.</span
           >
         </h1>
-        <p
+        <h2
           class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
         >
-          Calculadora de bolo inteligente y monitoreo en tiempo real. Diseñado
-          para ayudarte a ti o a tus seres queridos a vivir con tranquilidad.
-        </p>
+          Recomendaciones de insulina para tus comidas y un registro completo de
+          tu día a día. Guarda recetas, registra comidas, dosis de insulina y
+          lecturas de glucosa, y consulta tu evolución en gráficos y calendario.
+        </h2>
+
         <div class="mt-10 flex justify-center gap-4">
           <a
             class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
@@ -139,12 +146,12 @@
           >
             Comenzar gratis
           </a>
-          <a
+          <!-- <a
             class="inline-flex items-center justify-center px-8 py-3 border border-gray-200 dark:border-gray-700 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-surface-light dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
             href="#how-it-works"
           >
             Cómo funciona
-          </a>
+          </a> -->
         </div>
         <div class="mt-16 relative mx-auto max-w-5xl">
           <div
@@ -321,138 +328,149 @@
       </div>
     </section>
 
-    <!-- OUR MISSION -->
-    <section
-      class="animate-enter py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
-      id="story"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div class="lg:w-1/2 order-2 lg:order-1">
-            <div
-              class="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 dark:bg-gray-800"
-            >
-              <img
-                alt="Developer coding on a laptop with a warm cup of coffee, representing the dedication behind GlyMonitor"
-                class="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDrQ_X_YSwOk3YWewpnaJPcZwTq07t5tQkHnxG_bP6kfUnig_6oe4QVLfBtA7a7D_HVqU_wLTGDmgF7blJIX2iYCTHsNVY-OPGVUkqf10Y0gq1-KRMpEr0TadC9BPoH6-fuFAaOlYV3xcSyUh0A0Uh-SEP15luCn0ghN1baopbNZuyg57TXAsZzOqN6mTuax3dCkOaaGpMIE0XM0-vZX2aW4PhHeLR7oAH5Qe4F3Upa3_jWIj2C2DQ5RCbgj14sX9GZOWoRoc120"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8"
-              >
-                <p class="text-white font-medium italic">
-                  "Comenzó con una sola línea de código para ayudar a un amigo."
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="lg:w-1/2 order-1 lg:order-2">
-            <span
-              class="text-primary font-semibold tracking-wide uppercase text-sm"
-              >Nuestra Misión</span
-            >
-            <h2
-              class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
-            >
-              De una promesa personal a una herramienta pública.
-            </h2>
-            <div
-              class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
-            >
-              <p>
-                Hace seis años, a la hija de un amigo cercano le diagnosticaron
-                Diabetes Tipo 1. Verlos luchar con notas dispersas, cálculos
-                complejos y noches sin dormir fue desgarrador.
-              </p>
-              <p>
-                Construí la primera versión de GlyMonitor solo para ellos: una
-                herramienta simple para calcular bolos y registrar comidas.
-                Cambió sus vidas.
-              </p>
-              <p>
-                Hoy, GlyMonitor ha evolucionado en una plataforma integral.
-                Creemos que manejar la diabetes no debería ser un trabajo a
-                tiempo completo. Debería ser simple, preciso y accesible para
-                todos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Features -->
     <section
       class="py-20 bg-background-light dark:bg-background-dark relative"
-      id="features"
+      id="functionalidades"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2
             class="text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
           >
-            Todo lo que necesitas para mantenerte en rango
+            Todo lo que necesitas para la gestión diaria de la diabetes
           </h2>
-          <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
-            Herramientas completas empaquetadas en una interfaz limpia y
-            minimalista.
-          </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Recomendaciones de insulina -->
           <div
-            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-slate-100 dark:bg-slate-900/30 rounded-lg flex items-center justify-center mb-6 text-slate-600 dark:text-slate-400"
+            >
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                calculate
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Recomendaciones de insulina
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Obtén recomendaciones de insulina para tus comidas según tus
+              parámetros personales.
+            </p>
+          </div>
+
+          <!-- Registro de comidas y recetas -->
+          <div
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
           >
             <div
               class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 text-primary"
             >
-              <span class="material-icons-round text-2xl">edit_note</span>
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                restaurant
+              </span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Registro Inteligente
+              Registro de comidas y recetas
             </h3>
-            <p class="text-gray-600 dark:text-gray-400">
-              Registra comidas, insulina y niveles de glucosa sin esfuerzo.
-              Nuestras sugerencias inteligentes aprenden de tu historial para
-              hacer el registro más rápido que nunca.
+            <p class="text-gray-600 dark:text-gray-300">
+              Registra tus comidas diarias y guarda recetas habituales para
+              reutilizarlas fácilmente.
             </p>
           </div>
 
+          <!-- Registro de dosis de insulina -->
           <div
-            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400"
             >
-              <span class="material-icons-round text-2xl">insights</span>
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                vaccines
+              </span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Analíticas Avanzadas
+              Registro de dosis de insulina
             </h3>
-            <p class="text-gray-600 dark:text-gray-400">
-              Visualiza tu variabilidad, tiempo en rango y tendencias. Gráficos
-              hermosos te ayudan a entender cómo diferentes alimentos afectan tu
-              cuerpo.
+            <p class="text-gray-600 dark:text-gray-300">
+              Lleva un control claro de las dosis de insulina administradas a lo
+              largo del día.
             </p>
           </div>
 
+          <!-- Registro de glucosa -->
           <div
-            class="animate-enter-right bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
           >
             <div
               class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
             >
-              <span class="material-icons-round text-2xl">sync</span>
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                water_drop
+              </span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Integraciones
+              Registro de niveles de glucosa
             </h3>
-            <p class="text-gray-600 dark:text-gray-400">
-              Conéctate directamente con tus dispositivos CGM como Dexcom y
-              LibreLink. Ve tus datos en tiempo real junto con tus registros
-              automáticamente.
+            <p class="text-gray-600 dark:text-gray-300">
+              Anota tus lecturas de glucosa y revisa su evolución con el paso
+              del tiempo.
+            </p>
+          </div>
+
+          <!-- Gráficos -->
+          <div
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-6 text-yellow-600 dark:text-yellow-400"
+            >
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                show_chart
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Gráficos claros y visuales
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Visualiza comidas, insulina y glucosa en gráficos fáciles de
+              interpretar.
+            </p>
+          </div>
+
+          <!-- Calendario -->
+          <div
+            class="animate-enter-left bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center mb-6 text-cyan-600 dark:text-cyan-400"
+            >
+              <span class="material-icons-round text-2xl" aria-hidden="true">
+                calendar_month
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Calendario de seguimiento
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Consulta tu historial diario de comidas, insulina y glucosa en un
+              calendario visual.
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="text-center max-w-3xl mx-auto mt-8 px-4">
+        <p class="text-xl text-gray-600 dark:text-gray-400">
+          Una herramienta pensada para facilitar la gestión de la diabetes en el
+          día a día, ayudándote a llevar un mejor control de la insulina, la
+          glucosa y la alimentación de forma sencilla y organizada.
+        </p>
       </div>
     </section>
 
@@ -593,7 +611,7 @@
     </section>
 
     <!-- How it works -->
-    <section
+    <!-- <section
       class="py-20 bg-background-light dark:bg-background-dark"
       id="how-it-works"
     >
@@ -662,7 +680,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Testimonials -->
     <section
@@ -757,84 +775,78 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- HISTORIA -->
     <section
-      class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
-      id="contact"
+      class="animate-enter py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
+      id="historia"
     >
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
-        >
-          <div class="text-center mb-10">
-            <h2
-              class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div class="lg:w-1/2 order-2 lg:order-1">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-gray-200 dark:bg-gray-800"
             >
-              Ayúdanos a mejorar
-            </h2>
-            <p class="mt-4 text-gray-600 dark:text-gray-400">
-              GlyMonitor está construido para la comunidad. ¿Tienes alguna
-              sugerencia o solicitud de función? Nos encantaría escucharte.
-            </p>
+              <img
+                alt="Persona adulta usando GlyMonitor para la gestión de su diabetes"
+                class="object-cover w-full h-auto"
+                src="./assets/img/using-gly-monitor.webp"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8"
+              >
+                <p class="text-white font-medium italic">
+                  "GlyMonitor nació para resolver un problema real y lleva años
+                  haciéndolo."
+                </p>
+              </div>
+            </div>
           </div>
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                  for="name"
-                  >Nombre</label
-                >
-                <input
-                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                  id="name"
-                  placeholder="Tu nombre"
-                  type="text"
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                  for="email"
-                  >Email</label
-                >
-                <input
-                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                  id="email"
-                  placeholder="tu@ejemplo.com"
-                  type="email"
-                />
-              </div>
+          <div class="lg:w-1/2 order-1 lg:order-2">
+            <span
+              class="text-primary font-semibold tracking-wide uppercase text-sm"
+              >Nuestra Historia</span
+            >
+            <h2
+              class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
+            >
+              De una necesidad real a una herramienta pública.
+            </h2>
+            <div
+              class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              <p>
+                Hace varios años, un amigo cercano se enfrentó al diagnóstico de
+                diabetes tipo 1 en su familia. La gestión diaria implicaba
+                cálculos manuales, registros dispersos y un esfuerzo constante
+                para mantener el control.
+              </p>
+              <p>
+                Como desarrollador, creé una primera versión de GlyMonitor para
+                ayudarle a organizar el cálculo de bolos y el registro de
+                comidas en un solo lugar. No era un producto comercial, sino una
+                herramienta práctica pensada para el día a día.
+              </p>
+              <p>
+                Con el paso del tiempo, la aplicación se convirtió en una parte
+                habitual de su rutina. Durante años le ha ayudado a simplificar
+                decisiones, mantener un mejor seguimiento y ganar tranquilidad.
+              </p>
+              <p>
+                Esa experiencia real es la base de GlyMonitor hoy: una
+                aplicación diseñada para ofrecer una gestión de la diabetes más
+                clara, sencilla y accesible a cualquier persona que la necesite.
+              </p>
             </div>
-            <div>
-              <label
-                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                for="message"
-                >Feedback</label
-              >
-              <textarea
-                class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                id="message"
-                placeholder="Cuéntanos cómo podemos mejorar..."
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="text-center">
-              <button
-                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1"
-                type="button"
-              >
-                Enviar Feedback
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Descarga la app -->
     <section
       class="py-20 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800"
-      id="download-app"
+      id="descargar-app"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
@@ -962,6 +974,81 @@
       </div>
     </section>
 
+    <!-- Contact -->
+    <section
+      class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
+      id="contacto"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
+        >
+          <div class="text-center mb-10">
+            <h2
+              class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+            >
+              Ayúdanos a mejorar
+            </h2>
+            <p class="mt-4 text-gray-600 dark:text-gray-400">
+              GlyMonitor está construido para la comunidad. ¿Tienes alguna
+              sugerencia o solicitud de función? Nos encantaría escucharte.
+            </p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  for="name"
+                  >Nombre</label
+                >
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                  id="name"
+                  placeholder="Tu nombre"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                  id="email"
+                  placeholder="tu@ejemplo.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                for="message"
+                >Feedback</label
+              >
+              <textarea
+                class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                id="message"
+                placeholder="Cuéntanos cómo podemos mejorar..."
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1"
+                type="button"
+              >
+                Enviar Feedback
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <footer
       class="bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 pt-16 pb-8"
     >
@@ -969,9 +1056,14 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div class="col-span-1 md:col-span-1">
             <div class="flex items-center gap-2 mb-4">
-              <span class="material-icons-round text-primary text-2xl"
+              <!-- <span class="material-icons-round text-primary text-2xl"
                 >medical_services</span
-              >
+              > -->
+              <img
+                alt="Logo de GlyMonitor"
+                class="object-cover w-auto h-8"
+                src="./assets/logo/icon-72x72.png"
+              />
               <span
                 class="font-display font-bold text-xl text-gray-900 dark:text-white"
                 >Gly<span class="text-primary">Monitor</span></span
@@ -1074,7 +1166,7 @@
           <p
             class="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left"
           >
-            © 2024 GlyMonitor. No es consejo médico. Consulta siempre a tu
+            © 2026 GlyMonitor. No es consejo médico. Consulta siempre a tu
             doctor.
           </p>
           <div

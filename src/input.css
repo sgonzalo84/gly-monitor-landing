@@ -65,14 +65,26 @@ html {
   filter: blur(2px);
   transition: all 1s ease-in-out;
 }
-.animate-enter-left + .animate-enter-left {
-  transition-delay: 200ms;
-}
-.animate-enter-left + .animate-enter-left + .animate-enter-left {
-  transition-delay: 400ms;
+
+@media (width >= 48rem /* 768px */) {
+  .grid > .animate-enter-left:nth-child(2) {
+    transition-delay: 150ms;
+  }
+  .grid > .animate-enter-left:nth-child(3) {
+    transition-delay: 300ms;
+  }
+  .grid > .animate-enter-left:nth-child(4) {
+    transition-delay: 450ms;
+  }
+  .grid > .animate-enter-left:nth-child(5) {
+    transition-delay: 600ms;
+  }
+  .grid > .animate-enter-left:nth-child(6) {
+    transition-delay: 750ms;
+  }
 }
 
-.animate-enter-right {
+/* .animate-enter-right {
   transform: translateX(100%);
   opacity: 0;
   filter: blur(2px);
@@ -83,17 +95,17 @@ html {
 }
 .animate-enter-right + .animate-enter-right + .animate-enter-right {
   transition-delay: 400ms;
-}
+} */
 .animate-enter.visible,
-.animate-enter-left.visible,
-.animate-enter-right.visible {
+.animate-enter-left.visible {
   opacity: 1;
   filter: blur(0);
   transform: translate(0);
 }
 
 @media (prefers-reduced-motion) {
-  .animate-enter {
+  .animate-enter,
+  .animate-enter-left {
     transition: none;
   }
 }
