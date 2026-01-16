@@ -23,6 +23,8 @@
 /* Configuración de dark mode */
 @variant dark (&:is(.dark *));
 
+
+
 .material-icons-round.hidden {
   display: none;
 }
@@ -35,8 +37,8 @@ html {
 .animate-enter {
   opacity: 0;
   filter: blur(2px);
-  transform: translateY(30%);
-  transition: all 1s ease-in-out;
+  transform: translateY(100px);
+  transition: all 0.75s ease-in-out;
 }
 
 .animate-enter.visible {
