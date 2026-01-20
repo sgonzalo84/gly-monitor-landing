@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Gestión de la diabetes y control de insulina | GlyMonitor</title>
+    <title>Gestión de la diabetes y control de insulina | Glymo</title>
     <meta
       name="description"
       content="Calcula la insulina para tus comidas. Registra dosis, glucosa y comidas, guarda recetas y visualiza tu evolución con gráficos y calendario."
     />
+    <meta name="apple-mobile-web-app-title" content="Glymo" />
 
     <!-- DNS Prefetch para recursos externos -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -32,7 +33,36 @@
     />
 
     <link rel="stylesheet" href="./output.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./favicon/favicon.ico"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
 
     <noscript>
       <link
@@ -44,125 +74,7 @@
   <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased font-sans overflow-x-hidden"
   >
-    <nav
-      class="fixed w-full z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-          <div class="shrink-0 flex items-center gap-2">
-            <span
-              class="font-display font-bold text-2xl tracking-tight text-gray-900 dark:text-white"
-            >
-              Gly<span class="text-primary">Monitor</span>
-            </span>
-          </div>
-
-          <!-- Navegación desktop -->
-          <div class="hidden md:flex space-x-8 items-center px-4">
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#funcionalidades"
-              >Funcionalidades</a
-            >
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#testimonios"
-              >Testimonios</a
-            >
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#historia"
-              >Nuestra historia</a
-            >
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#faqs"
-              >Preguntas frecuentes</a
-            >
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#descargar-app"
-              >Descargar app</a
-            >
-            <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              href="#contacto"
-              >Contacto</a
-            >
-          </div>
-
-          <div class="flex items-center gap-4">
-            <!-- Botón tema -->
-            <button
-              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
-              id="theme-toggle"
-            >
-              <span
-                class="material-icons-round hidden"
-                id="theme-toggle-dark-icon"
-                >dark_mode</span
-              >
-              <span
-                class="material-icons-round hidden"
-                id="theme-toggle-light-icon"
-                >light_mode</span
-              >
-            </button>
-            <!-- Botón menú móvil -->
-            <button
-              class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
-              id="mobile-menu-button"
-            >
-              <span class="material-icons-round" id="menu-icon">menu</span>
-              <span class="material-icons-round hidden" id="close-icon">
-                close
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Menú móvil -->
-      <div
-        class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 shadow-2xl"
-        id="mobile-menu"
-      >
-        <div
-          class="px-2 pt-2 pb-3 space-y-1 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800"
-        >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#funcionalidades"
-            >Funcionalidades</a
-          >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#testimonios"
-            >Testimonios</a
-          >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#historia"
-            >Nuestra historia</a
-          >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#faqs"
-            >Preguntas frecuentes</a
-          >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#descargar-app"
-            >Descargar app</a
-          >
-          <a
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#contacto"
-            >Contacto</a
-          >
-        </div>
-      </div>
-    </nav>
+    <glymo-header></glymo-header>
 
     <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
@@ -203,7 +115,7 @@
           </a>
         </div>
 
-        <!-- Gly monitor dashboard mockup -->
+        <!-- Glymo dashboard mockup -->
         <div class="mt-16 relative mx-auto max-w-5xl">
           <div
             class="rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden relative"
@@ -221,7 +133,7 @@
               <div class="md:col-span-2 space-y-4">
                 <div class="flex justify-between items-end mb-6">
                   <div class="text-start">
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <div class="text-sm text-gray-500 dark:text-gray-300">
                       Glucosa actual
                     </div>
                     <div
@@ -305,7 +217,7 @@
                     >
                       Almuerzo
                     </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                    <div class="text-xs text-gray-500 dark:text-gray-300">
                       Plátano, 20g HC
                     </div>
                   </div>
@@ -327,7 +239,7 @@
                     >
                       Insulina
                     </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                    <div class="text-xs text-gray-500 dark:text-gray-300">
                       1.5 UD Rápida
                     </div>
                   </div>
@@ -349,7 +261,7 @@
                     >
                       Lectura
                     </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                    <div class="text-xs text-gray-500 dark:text-gray-300">
                       100 mg/dL
                     </div>
                   </div>
@@ -552,10 +464,10 @@
               Control de carbohidratos, conquistado.
             </h2>
             <p class="text-lg text-gray-700 dark:text-gray-300">
-              Crea y guarda tus recetas favoritas. GlyMonitor calcula
-              automáticamente los carbohidratos totales y la información
-              nutricional por porción, para que puedas tomar decisiones con más
-              seguridad y menos esfuerzo.
+              Crea y guarda tus recetas favoritas. Glymo calcula automáticamente
+              los carbohidratos totales y la información nutricional por
+              porción, para que puedas tomar decisiones con más seguridad y
+              menos esfuerzo.
             </p>
             <ul class="space-y-3 mt-4">
               <li
@@ -777,16 +689,16 @@
               class="relative rounded-2xl overflow-hidden shadow-xl aspect-6/7 bg-gray-200 dark:bg-gray-800"
             >
               <img
-                alt="Persona adulta usando GlyMonitor para la gestión de su diabetes"
+                alt="Persona adulta usando Glymo para la gestión de su diabetes"
                 class="object-cover w-full h-auto"
-                src="./assets/img/using-gly-monitor.webp"
+                src="./assets/img/using-glymo.webp"
                 loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-8"
               >
                 <p class="text-white font-medium italic">
-                  "GlyMonitor nació para resolver un problema real y lleva años
+                  "Glymo nació para resolver un problema real y lleva años
                   haciéndolo."
                 </p>
               </div>
@@ -812,7 +724,7 @@
                 para mantener el control.
               </p>
               <p>
-                Como desarrollador, creé una primera versión de GlyMonitor para
+                Como desarrollador, creé una primera versión de Glymo para
                 ayudarle a organizar el cálculo de bolos y el registro de
                 comidas en un solo lugar. No era un producto comercial, sino una
                 herramienta práctica pensada para el día a día.
@@ -823,9 +735,9 @@
                 decisiones, mantener un mejor seguimiento y ganar tranquilidad.
               </p>
               <p>
-                Esa experiencia real es la base de GlyMonitor hoy: una
-                aplicación diseñada para ofrecer una gestión de la diabetes más
-                clara, sencilla y accesible a cualquier persona que la necesite.
+                Esa experiencia real es la base de Glymo hoy: una aplicación
+                diseñada para ofrecer una gestión de la diabetes más clara,
+                sencilla y accesible a cualquier persona que la necesite.
               </p>
             </div>
           </div>
@@ -853,7 +765,7 @@
             <summary
               class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
             >
-              ¿GlyMonitor sustituye a un médico o profesional sanitario?
+              ¿Glymo sustituye a un médico o profesional sanitario?
               <span
                 class="material-icons-round transition-transform group-open:rotate-180"
               >
@@ -861,11 +773,10 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              No. GlyMonitor no es un dispositivo médico ni sustituye en ningún
-              caso la consulta con un profesional sanitario. La aplicación
-              ofrece recomendaciones y herramientas de seguimiento, pero
-              cualquier decisión médica debe tomarse siempre con tu equipo de
-              salud.
+              No. Glymo no es un dispositivo médico ni sustituye en ningún caso
+              la consulta con un profesional sanitario. La aplicación ofrece
+              recomendaciones y herramientas de seguimiento, pero cualquier
+              decisión médica debe tomarse siempre con tu equipo de salud.
             </p>
           </details>
 
@@ -883,8 +794,8 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              GlyMonitor puede utilizarse en distintos tipos de diabetes. Aunque
-              su desarrollo inicial estuvo enfocado en diabetes tipo 1, sus
+              Glymo puede utilizarse en distintos tipos de diabetes. Aunque su
+              desarrollo inicial estuvo enfocado en diabetes tipo 1, sus
               funciones son útiles para cualquier persona que necesite gestionar
               su diabetes.
             </p>
@@ -896,7 +807,7 @@
             <summary
               class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
             >
-              ¿Puedo conectar GlyMonitor con sensores de glucosa?
+              ¿Puedo conectar Glymo con sensores de glucosa?
               <span
                 class="material-icons-round transition-transform group-open:rotate-180"
               >
@@ -904,9 +815,9 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              GlyMonitor está trabajando en la integración con sensores de
-              glucosa como LibreLink y Dexcom. También puedes introducir tus
-              lecturas de glucosa manualmente.
+              Glymo está trabajando en la integración con sensores de glucosa
+              como LibreLink y Dexcom. También puedes introducir tus lecturas de
+              glucosa manualmente.
             </p>
           </details>
 
@@ -924,10 +835,10 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Tus datos son privados y solo accesibles por ti. GlyMonitor no
-              comparte la información registrada con terceros. Toda la
-              información se utiliza únicamente para ofrecerte las funciones de
-              seguimiento y visualización dentro de la aplicación.
+              Tus datos son privados y solo accesibles por ti. Glymo no comparte
+              la información registrada con terceros. Toda la información se
+              utiliza únicamente para ofrecerte las funciones de seguimiento y
+              visualización dentro de la aplicación.
             </p>
           </details>
           <details
@@ -936,7 +847,7 @@
             <summary
               class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
             >
-              ¿GlyMonitor es gratuita?
+              ¿Glymo es gratuita?
               <span
                 class="material-icons-round transition-transform group-open:rotate-180"
               >
@@ -944,9 +855,9 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Actualmente, GlyMonitor es gratuita. En el futuro podrían
-              incorporarse opciones como publicidad para ayudar a cubrir los
-              costes de mantenimiento y desarrollo de la plataforma.
+              Actualmente, Glymo es gratuita. En el futuro podrían incorporarse
+              opciones como publicidad para ayudar a cubrir los costes de
+              mantenimiento y desarrollo de la plataforma.
             </p>
           </details>
           <details
@@ -955,7 +866,7 @@
             <summary
               class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
             >
-              ¿En qué dispositivos está disponible GlyMonitor?
+              ¿En qué dispositivos está disponible Glymo?
               <span
                 class="material-icons-round transition-transform group-open:rotate-180"
               >
@@ -963,8 +874,8 @@
               </span>
             </summary>
             <p class="mt-4 text-gray-700 dark:text-gray-300">
-              GlyMonitor está disponible en versión web. Está previsto su
-              lanzamiento en Android próximamente y, más adelante, en iOS.
+              Glymo está disponible en versión web. Está previsto su lanzamiento
+              en Android próximamente y, más adelante, en iOS.
             </p>
           </details>
         </div>
@@ -983,7 +894,7 @@
           >
             Descarga la APP
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400">
+          <p class="text-xl text-gray-600 dark:text-gray-300">
             Gestiona tu diabetes sobre la marcha con nuestra aplicacion.
           </p>
         </div>
@@ -1001,7 +912,7 @@
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
               Android
             </h3>
-            <p class="text-gray-500 dark:text-gray-400 mb-8">
+            <p class="text-gray-500 dark:text-gray-300 mb-8">
               Disponible en Google Play Store
             </p>
             <div
@@ -1049,7 +960,7 @@
             <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
               Instalación en iOS (Web App)
             </h3>
-            <p class="text-gray-500 dark:text-gray-400 mb-10 max-w-sm">
+            <p class="text-gray-500 dark:text-gray-300 mb-10 max-w-sm">
               Instala la aplicación directamente desde Safari para la mejor
               experiencia.
             </p>
@@ -1138,10 +1049,10 @@
             >
               Ayúdanos a mejorar
             </h2>
-            <p class="mt-4 text-gray-600 dark:text-gray-400">
-              GlyMonitor está construido para la comunidad.
+            <p class="mt-4 text-gray-600 dark:text-gray-300">
+              Glymo está construido para la comunidad.
             </p>
-            <p class="mt-2 text-gray-600 dark:text-gray-400">
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
               ¿Tienes alguna sugerencia o solicitud de función? Nos encantaría
               escucharte.
             </p>
@@ -1209,101 +1120,9 @@
       </div>
     </section>
 
-    <footer
-      class="bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 pt-12 pb-8"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16"
-        >
-          <div class="max-w-md">
-            <div class="flex items-center gap-2 mb-4">
-              <img
-                alt="Logo de GlyMonitor"
-                height="40px"
-                width="40px"
-                src="./assets/logo/icon-72x72.png"
-                loading="eager"
-              />
-              <span
-                class="font-display font-bold text-xl text-gray-900 dark:text-white"
-                >Gly<span class="text-primary">Monitor</span></span
-              >
-            </div>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              GlyMonitor. Gestión de la diabetes, simplificada.
-            </p>
-          </div>
-          <div
-            class="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full md:w-auto"
-          >
-            <div class="flex flex-col space-y-3">
-              <h4
-                class="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider"
-              >
-                Enlaces
-              </h4>
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#funcionalidades"
-                >Funcionalidades</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#historia"
-                >Nuestra Historia</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#faqs"
-                >Preguntas frecuentes</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#descargar-app"
-                >Descargar APP</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#contacto"
-                >Contacto</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors font-medium"
-                href="https://gly-monitor.web.app/login"
-                >Comenzar ahora</a
-              >
-            </div>
-            <div class="flex flex-col space-y-3">
-              <h4
-                class="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider"
-              >
-                Legal
-              </h4>
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#"
-                >Términos</a
-              >
-              <a
-                class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-                href="#"
-                >Privacidad</a
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 text-center"
-        >
-          <p class="text-xs text-gray-400 dark:text-gray-500">
-            © <span class="current-year"></span> GlyMonitor. No es consejo
-            médico. Consulta siempre a tu doctor.
-          </p>
-        </div>
-      </div>
-    </footer>
+   <glymo-footer></glymo-footer>
 
+    <script src="components.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

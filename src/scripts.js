@@ -1,22 +1,5 @@
 /**
- * Theme selector
- */
-const themeToggleBtn = document.getElementById("theme-toggle");
-const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-const themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-document.documentElement.classList.toggle("dark", prefersDark);
-themeToggleLightIcon.classList.toggle("hidden", !prefersDark);
-themeToggleDarkIcon.classList.toggle("hidden", prefersDark);
-
-themeToggleBtn.addEventListener("click", () => {
-  document.documentElement.classList.toggle("dark");
-  themeToggleDarkIcon.classList.toggle("hidden");
-  themeToggleLightIcon.classList.toggle("hidden");
-});
-
-/**
- * Scroll manager
+ * Scroll animations
  */
 const observerOptions = { threshold: 0.1 };
 
@@ -95,43 +78,3 @@ function showToast(message, type = "success") {
     setTimeout(() => toast.remove(), 300);
   }, 10000);
 }
-
-/**
- * Footer
- */
-document.querySelector(".current-year").textContent = new Date().getFullYear();
-
-/**
- * Mobile menu
- **/
-const mobileMenuButton = document.getElementById("mobile-menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
-const menuIcon = document.getElementById("menu-icon");
-const closeIcon = document.getElementById("close-icon");
-
-const openClasses = ["max-h-96", "opacity-100"];
-const closeClasses = ["max-h-0", "opacity-0"];
-
-const toggleMenu = (shouldOpen) => {
-  if (shouldOpen) {
-    mobileMenu.classList.remove(...closeClasses);
-    mobileMenu.classList.add(...openClasses);
-    menuIcon.classList.add("hidden");
-    closeIcon.classList.remove("hidden");
-  } else {
-    mobileMenu.classList.remove(...openClasses);
-    mobileMenu.classList.add(...closeClasses);
-    menuIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
-  }
-};
-const isMenuOpen = () => mobileMenu.classList.contains(openClasses[0]);
-
-mobileMenuButton.addEventListener("click", (e) => {
-  e.stopPropagation();
-  toggleMenu(!isMenuOpen());
-});
-
-document.addEventListener("click", (e) => {
-  toggleMenu(false);
-});
