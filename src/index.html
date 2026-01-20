@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -29,7 +29,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
 
     <link rel="stylesheet" href="./output.css" />
@@ -39,7 +42,7 @@
       type="image/x-icon"
       href="./assets/favicon/favicon.ico"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
@@ -1120,7 +1123,7 @@
       </div>
     </section>
 
-   <glymo-footer></glymo-footer>
+    <glymo-footer></glymo-footer>
 
     <script src="components.js"></script>
     <script src="scripts.js"></script>
