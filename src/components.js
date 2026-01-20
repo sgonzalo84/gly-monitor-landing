@@ -98,8 +98,9 @@ class GlymoLandingHeader extends HTMLElement {
            <a class="flex items-center gap-2" href="/">
                 <img
                     alt="Logo de Glymo"
-                    height="36px"
-                    width="36px"
+                    class="w-9 h-9"
+                    height="50"
+                    width="50"
                     src="./assets/logo/glymo-logo.webp"
                     loading="eager"
                 />
