@@ -10,20 +10,35 @@
     />
     <meta name="apple-mobile-web-app-title" content="Glymo" />
 
+    <!-- Open Graph para redes sociales -->
+    <meta
+      property="og:title"
+      content="Glymo - Gestión de la diabetes simplificada"
+    />
+    <meta
+      property="og:description"
+      content="Calcula la insulina para tus comidas. Registra dosis, glucosa y comidas, guarda recetas y visualiza tu evolución con gráficos y calendario."
+    />
+    <meta
+      property="og:image"
+      content="https://glymo.es/assets/favicon/favicon-96x96.png"
+    />
+    <meta property="og:url" content="https://glymo.es/" />
+
     <!-- DNS Prefetch para recursos externos -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <!-- <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" /> -->
 
     <!-- Preconnect para recursos críticos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Cargar fuentes con display=swap y solo los pesos necesarios -->
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <!-- Preload de Material Icons -->
     <link
       rel="preload"
@@ -79,1049 +94,1063 @@
   >
     <glymo-header></glymo-header>
 
-    <!-- Hero -->
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
-      >
-        <span
-          class="inline-block py-1 px-3 rounded-full bg-accent-blue dark:bg-accent-blue-dark text-blue-800 dark:text-blue-100 text-xs font-semibold tracking-wide uppercase mb-6"
+    <main>
+      <!-- Hero -->
+      <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
         >
-          Ahora en Beta Abierta
-        </span>
-
-        <h1
-          class="text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 dark:text-white mb-6"
-        >
-          Gestión de la diabetes, <br class="hidden md:block" />
           <span
-            class="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-600"
-            >simplificada.
+            class="inline-block py-1 px-3 rounded-full bg-accent-blue dark:bg-accent-blue-dark text-blue-800 dark:text-blue-100 text-xs font-semibold tracking-wide uppercase mb-6"
+          >
+            Ahora en Beta Abierta
           </span>
-        </h1>
 
-        <h2
-          class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
-        >
-          Recomendaciones de insulina para tus comidas y un registro completo de
-          tu día a día. Guarda recetas, registra comidas, dosis de insulina y
-          lecturas de glucosa, y consulta tu evolución en gráficos y calendario.
-        </h2>
-
-        <!-- CTA -->
-        <div class="mt-10 flex justify-center gap-4">
-          <a
-            class="inline-flex items-center justify-center px-10 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
-            href="https://gly-monitor.web.app/login"
+          <h1
+            class="text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 dark:text-white mb-6"
           >
-            Comenzar gratis
-          </a>
-        </div>
-
-        <!-- Glymo dashboard mockup -->
-        <div class="mt-16 relative mx-auto max-w-5xl">
-          <div
-            class="rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden relative"
-          >
-            <div
-              class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 flex items-center justify-between"
+            Gestión de la diabetes, <br class="hidden md:block" />
+            <span
+              class="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-600"
             >
-              <div class="flex gap-2">
-                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-              </div>
-            </div>
-            <div class="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="md:col-span-2 space-y-4">
-                <div class="flex justify-between items-end mb-6">
-                  <div class="text-start">
-                    <div class="text-sm text-gray-500 dark:text-gray-300">
-                      Glucosa actual
-                    </div>
-                    <div
-                      class="text-4xl font-display font-bold text-gray-900 dark:text-white"
-                    >
-                      104
-                      <span class="text-lg font-normal text-gray-500"
-                        >mg/dL</span
-                      >
-                      <span
-                        class="material-icons-round text-green-500 text-3xl align-bottom"
-                        >arrow_forward</span
-                      >
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <div
-                      class="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm font-medium"
-                    >
-                      En Rango
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="h-48 w-full bg-linear-to-b from-blue-50 to-transparent dark:from-blue-900/20 dark:to-transparent rounded-lg border border-blue-100 dark:border-blue-900/30 relative overflow-hidden"
-                >
-                  <svg class="w-full h-full" preserveAspectRatio="none">
-                    <path
-                      d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75 V150 H0 Z"
-                      fill="rgba(14, 165, 233, 0.2)"
-                    ></path>
-                    <path
-                      d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75"
-                      fill="none"
-                      stroke="#0EA5E9"
-                      stroke-width="3"
-                    ></path>
-                    <line
-                      stroke="#EAB308"
-                      stroke-dasharray="4"
-                      stroke-width="1"
-                      x1="0"
-                      x2="500"
-                      y1="30"
-                      y2="30"
-                    ></line>
-                    <line
-                      stroke="#EF4444"
-                      stroke-dasharray="4"
-                      stroke-width="1"
-                      x1="0"
-                      x2="500"
-                      y1="120"
-                      y2="120"
-                    ></line>
-                  </svg>
-                </div>
-                <div class="flex justify-between text-xs text-gray-400 mt-2">
-                  <span>00:00</span>
-                  <span>06:00</span>
-                  <span>12:00</span>
-                  <span>18:00</span>
-                  <span>24:00</span>
-                </div>
-              </div>
-              <div
-                class="space-y-4 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-8"
-              >
-                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
-                  Eventos de Hoy
-                </h3>
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-primary shrink-0"
-                  >
-                    <span class="material-icons-round text-sm">restaurant</span>
-                  </div>
-                  <div class="text-start">
-                    <div
-                      class="text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Almuerzo
-                    </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-300">
-                      Plátano, 20g HC
-                    </div>
-                  </div>
-                  <div
-                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                  >
-                    11:30
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 shrink-0"
-                  >
-                    <span class="material-icons-round text-sm">vaccines</span>
-                  </div>
-                  <div class="text-start">
-                    <div
-                      class="text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Insulina
-                    </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-300">
-                      1.5 UD Rápida
-                    </div>
-                  </div>
-                  <div
-                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                  >
-                    10:15
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 shrink-0"
-                  >
-                    <span class="material-icons-round text-sm">water_drop</span>
-                  </div>
-                  <div class="text-start">
-                    <div
-                      class="text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Lectura
-                    </div>
-                    <div class="text-xs text-gray-500 dark:text-gray-300">
-                      100 mg/dL
-                    </div>
-                  </div>
-                  <div
-                    class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                  >
-                    08:00
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              simplificada.
+            </span>
+          </h1>
 
-      <!-- Blurry background -->
-      <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 overflow-hidden pointer-events-none"
-      >
-        <div
-          class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 dark:bg-primary/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-80"
-        ></div>
-        <div
-          class="absolute top-0 right-1/4 w-96 h-96 bg-blue-200 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-80"
-        ></div>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section
-      class="py-20 bg-white dark:bg-surface-dark relative"
-      id="funcionalidades"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="animate-enter text-3xl font-display font-bold sm:text-4xl">
-            Todo lo que necesitas para la gestión diaria de la diabetes
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <!-- Recomendaciones de insulina -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-slate-100 dark:bg-slate-900/30 rounded-lg flex items-center justify-center mb-6 text-slate-600 dark:text-slate-400"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                calculate
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Recomendaciones de insulina
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Obtén recomendaciones de insulina para tus comidas según tus
-              parámetros personales.
-            </p>
-          </div>
-
-          <!-- Registro de comidas y recetas -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 text-primary"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                restaurant
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Registro de comidas y recetas
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Registra tus comidas diarias y guarda recetas habituales para
-              reutilizarlas fácilmente.
-            </p>
-          </div>
-
-          <!-- Registro de dosis de insulina -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                vaccines
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Registro de dosis de insulina
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Lleva un control claro de las dosis de insulina administradas a lo
-              largo del día.
-            </p>
-          </div>
-
-          <!-- Registro de glucosa -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                water_drop
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Registro de niveles de glucosa
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Anota tus lecturas de glucosa y revisa su evolución con el paso
-              del tiempo.
-            </p>
-          </div>
-
-          <!-- Gráficos -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-6 text-yellow-600 dark:text-yellow-400"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                show_chart
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Gráficos claros y visuales
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Visualiza comidas, insulina y glucosa en gráficos fáciles de
-              interpretar.
-            </p>
-          </div>
-
-          <!-- Calendario -->
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center mb-6 text-cyan-600 dark:text-cyan-400"
-            >
-              <span class="material-icons-round text-2xl" aria-hidden="true">
-                calendar_month
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Calendario de seguimiento
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Consulta tu historial diario de comidas, insulina y glucosa en un
-              calendario visual.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="animate-enter text-center max-w-3xl mx-auto mt-8 px-4">
-        <p class="text-xl text-gray-900 dark:text-gray-300">
-          Una herramienta pensada para facilitar la gestión de la diabetes en el
-          día a día, ayudándote a llevar un mejor control de la insulina, la
-          glucosa y la alimentación de forma sencilla y organizada.
-        </p>
-        <div class="mt-10 flex justify-center gap-4">
-          <a
-            class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
-            href="https://gly-monitor.web.app/login"
-          >
-            Registrate gratis
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recetas -->
-    <section
-      class="py-20 bg-white dark:bg-surface-dark overflow-hidden border-t border-gray-100 dark:border-gray-800"
-      id="recipes"
-    >
-      <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-12"
-        >
-          <div class="md:w-1/2 space-y-6">
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-gray-800 text-primary text-sm font-semibold shadow-sm"
-            >
-              <span class="material-icons-round text-sm">restaurant_menu</span>
-              Libro de Recetas
-            </div>
-            <h2
-              class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white"
-            >
-              Control de carbohidratos, conquistado.
-            </h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300">
-              Crea y guarda tus recetas favoritas. Glymo calcula automáticamente
-              los carbohidratos totales y la información nutricional por
-              porción, para que puedas tomar decisiones con más seguridad y
-              menos esfuerzo.
-            </p>
-            <ul class="space-y-3 mt-4">
-              <li
-                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
-              >
-                <span class="material-icons-round text-green-500">
-                  check_circle
-                </span>
-                <span>Guarda recetas personalizadas como “Lasaña de mamá”</span>
-              </li>
-              <li
-                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
-              >
-                <span class="material-icons-round text-green-500"
-                  >check_circle</span
-                >
-                <span>Ajusta tamaños de porción al instante</span>
-              </li>
-              <li
-                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
-              >
-                <span class="material-icons-round text-green-500"
-                  >check_circle</span
-                >
-                <span>Accede a una base de datos de ingredientes comunes</span>
-              </li>
-              <li
-                class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
-              >
-                <span class="material-icons-round text-green-500"
-                  >check_circle</span
-                >
-                <span>
-                  Crea ingredientes personalizados con su información
-                  nutricional
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="md:w-1/2 relative">
-            <div
-              class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-6 max-w-sm mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500 border border-gray-100 dark:border-gray-700"
-            >
-              <div class="flex justify-between items-center mb-4">
-                <h4 class="font-bold text-lg dark:text-white">
-                  Avena con Chía
-                </h4>
-                <span class="material-icons-round text-gray-400"
-                  >expand_less</span
-                >
-              </div>
-              <div class="grid grid-cols-2 gap-3 mb-6">
-                <div
-                  class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
-                >
-                  <div class="text-xs">Carbohidratos</div>
-                  <div class="text-xl font-bold">38.5 g</div>
-                </div>
-                <div
-                  class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
-                >
-                  <div class="text-xs">1 ración de HC son</div>
-                  <div class="text-xl font-bold">32 g</div>
-                </div>
-              </div>
-              <div class="space-y-3">
-                <div
-                  class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
-                >
-                  <span class="text-gray-600 dark:text-gray-300">
-                    Avena integral
-                  </span>
-                  <span class="font-medium text-gray-900 dark:text-white">
-                    50g
-                  </span>
-                </div>
-                <div
-                  class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
-                >
-                  <span class="text-gray-600 dark:text-gray-300">
-                    Leche, semidesnatada
-                  </span>
-                  <span class="font-medium text-gray-900 dark:text-white">
-                    75g
-                  </span>
-                </div>
-                <div class="flex justify-between text-sm pb-1">
-                  <span class="text-gray-600 dark:text-gray-300">
-                    Semillas de chía
-                  </span>
-                  <span class="font-medium text-gray-900 dark:text-white">
-                    5g
-                  </span>
-                </div>
-              </div>
-              <div class="mt-6 flex gap-3">
-                <button
-                  class="flex-1 py-2 rounded-full border border-gray-200 dark:border-gray-600 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white"
-                >
-                  Editar
-                </button>
-                <button
-                  class="flex-1 py-2 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark shadow-md shadow-primary/30"
-                >
-                  Agregar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section
-      class="py-20 bg-background-light dark:bg-background-dark"
-      id="testimonios"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
           <h2
-            class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+            class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
           >
-            Conoce las experiencias de nuestra comunidad de usuarios.
+            Recomendaciones de insulina para tus comidas y un registro completo
+            de tu día a día. Guarda recetas, registra comidas, dosis de insulina
+            y lecturas de glucosa, y consulta tu evolución en gráficos y
+            calendario.
           </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
-          >
-            <span
-              class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
-            >
-              format_quote
-            </span>
-            <div class="relative z-10">
-              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "La calculadora de bolos ha cambiado el juego para los almuerzos
-                de mi hija. Mucho menos estrés."
-              </p>
-              <div class="flex items-center gap-3">
-                <div>
-                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                    Maria Pliego
-                  </h4>
-                  <span
-                    class="inline-block mt-1 px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium"
-                  >
-                    Usuaria por 6 años
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
-          >
-            <span
-              class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
-              >format_quote</span
-            >
-            <div class="relative z-10">
-              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "Finalmente, una interfaz que no se siente como un libro de
-                texto médico. Es limpia y realmente útil."
-              </p>
-              <div class="flex items-center gap-3">
-                <div>
-                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                    Aurelio Gomez
-                  </h4>
-                  <span
-                    class="inline-block mt-1 px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium"
-                    >Usuario por 6 años
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
-          >
-            <span
-              class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
-            >
-              format_quote
-            </span>
-            <div class="relative z-10">
-              <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "La función de recetas me ahorra mucho tiempo cada día. No puedo
-                imaginarme volver atrás."
-              </p>
-              <div class="flex items-center gap-3">
-                <div>
-                  <h4 class="font-bold text-gray-900 dark:text-white text-sm">
-                    Elena Rodriguez
-                  </h4>
-                  <span
-                    class="inline-block mt-1 px-2 py-0.5 rounded bg-pink-50 dark:bg-primary/10 text-primary dark:text-primary-dark text-xs font-medium"
-                    >Usuaria por 2 años
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Nuestra historia -->
-    <section
-      class="py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
-      id="historia"
-    >
-      <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div class="lg:w-1/2 order-2 lg:order-1">
-            <div
-              class="relative rounded-2xl overflow-hidden shadow-xl aspect-6/7 bg-gray-200 dark:bg-gray-800"
+          <!-- CTA -->
+          <div class="mt-10 flex justify-center gap-4">
+            <a
+              class="inline-flex items-center justify-center px-10 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+              href="https://gly-monitor.web.app/login"
             >
-              <img
-                alt="Persona adulta usando Glymo para la gestión de su diabetes"
-                class="object-cover w-full h-auto"
-                src="./assets/img/using-glymo.webp"
-                loading="lazy"
-              />
+              Comenzar gratis
+            </a>
+          </div>
+
+          <!-- Glymo dashboard mockup -->
+          <div class="mt-16 lg:mt-20 relative mx-auto max-w-5xl">
+            <div
+              class="rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden relative"
+            >
               <div
-                class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-8"
+                class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 flex items-center justify-between"
               >
-                <p class="text-white font-medium italic">
-                  "Glymo nació para resolver un problema real y lleva años
-                  haciéndolo."
+                <div class="flex gap-2">
+                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+              </div>
+              <div class="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-4">
+                  <div class="flex justify-between items-end mb-6">
+                    <div class="text-start">
+                      <div class="text-sm text-gray-600 dark:text-gray-300">
+                        Glucosa actual
+                      </div>
+                      <div
+                        class="text-4xl font-display font-bold text-gray-900 dark:text-white"
+                      >
+                        104
+                        <span class="text-sm font-normal">mg/dL</span>
+                        <span
+                          class="material-icons-round text-green-500 text-3xl align-bottom"
+                          >arrow_forward</span
+                        >
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div
+                        class="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm font-medium"
+                      >
+                        En Rango
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="h-48 w-full bg-linear-to-b from-blue-50 to-transparent dark:from-blue-900/20 dark:to-transparent rounded-lg border border-blue-100 dark:border-blue-900/30 relative overflow-hidden"
+                  >
+                    <svg class="w-full h-full" preserveAspectRatio="none">
+                      <path
+                        d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75 V150 H0 Z"
+                        fill="rgba(14, 165, 233, 0.2)"
+                      ></path>
+                      <path
+                        d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75"
+                        fill="none"
+                        stroke="#0EA5E9"
+                        stroke-width="3"
+                      ></path>
+                      <line
+                        stroke="#EAB308"
+                        stroke-dasharray="4"
+                        stroke-width="1"
+                        x1="0"
+                        x2="500"
+                        y1="30"
+                        y2="30"
+                      ></line>
+                      <line
+                        stroke="#EF4444"
+                        stroke-dasharray="4"
+                        stroke-width="1"
+                        x1="0"
+                        x2="500"
+                        y1="120"
+                        y2="120"
+                      ></line>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="space-y-4 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-8"
+                >
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+                    Eventos de Hoy
+                  </h3>
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-primary shrink-0"
+                    >
+                      <span class="material-icons-round text-sm"
+                        >restaurant</span
+                      >
+                    </div>
+                    <div class="text-start">
+                      <div
+                        class="text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Almuerzo
+                      </div>
+                      <div class="text-xs text-gray-500 dark:text-gray-300">
+                        Plátano, 20g HC
+                      </div>
+                    </div>
+                    <div
+                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                    >
+                      11:30
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 shrink-0"
+                    >
+                      <span class="material-icons-round text-sm">vaccines</span>
+                    </div>
+                    <div class="text-start">
+                      <div
+                        class="text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Insulina
+                      </div>
+                      <div class="text-xs text-gray-500 dark:text-gray-300">
+                        1.5 UD Rápida
+                      </div>
+                    </div>
+                    <div
+                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                    >
+                      10:15
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 shrink-0"
+                    >
+                      <span class="material-icons-round text-sm"
+                        >water_drop</span
+                      >
+                    </div>
+                    <div class="text-start">
+                      <div
+                        class="text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Lectura
+                      </div>
+                      <div class="text-xs text-gray-500 dark:text-gray-300">
+                        100 mg/dL
+                      </div>
+                    </div>
+                    <div
+                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
+                    >
+                      08:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blurry background -->
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 overflow-hidden pointer-events-none"
+        >
+          <div
+            class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 dark:bg-primary/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-80"
+          ></div>
+          <div
+            class="absolute top-0 right-1/4 w-96 h-96 bg-blue-200 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-80"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section
+        class="py-20 bg-white dark:bg-surface-dark relative"
+        id="funcionalidades"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="animate-enter text-3xl font-display font-bold sm:text-4xl"
+            >
+              Todo lo que necesitas para la gestión diaria de la diabetes
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Recomendaciones de insulina -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-slate-100 dark:bg-slate-900/30 rounded-lg flex items-center justify-center mb-6 text-slate-600 dark:text-slate-400"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  calculate
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Recomendaciones de insulina
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Obtén recomendaciones de insulina para tus comidas según tus
+                parámetros personales.
+              </p>
+            </div>
+
+            <!-- Registro de comidas y recetas -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 text-primary"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  restaurant
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Registro de comidas y recetas
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Registra tus comidas diarias y guarda recetas habituales para
+                reutilizarlas fácilmente.
+              </p>
+            </div>
+
+            <!-- Registro de dosis de insulina -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  vaccines
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Registro de dosis de insulina
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Lleva un control claro de las dosis de insulina administradas a
+                lo largo del día.
+              </p>
+            </div>
+
+            <!-- Registro de glucosa -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  water_drop
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Registro de niveles de glucosa
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Anota tus lecturas de glucosa y revisa su evolución con el paso
+                del tiempo.
+              </p>
+            </div>
+
+            <!-- Gráficos -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-6 text-yellow-600 dark:text-yellow-400"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  show_chart
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Gráficos claros y visuales
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Visualiza comidas, insulina y glucosa en gráficos fáciles de
+                interpretar.
+              </p>
+            </div>
+
+            <!-- Calendario -->
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center mb-6 text-cyan-600 dark:text-cyan-400"
+              >
+                <span class="material-icons-round text-2xl" aria-hidden="true">
+                  calendar_month
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Calendario de seguimiento
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Consulta tu historial diario de comidas, insulina y glucosa en
+                un calendario visual.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate-enter text-center max-w-3xl mx-auto mt-8 px-4">
+          <p class="text-xl text-gray-900 dark:text-gray-300">
+            Una herramienta pensada para facilitar la gestión de la diabetes en
+            el día a día, ayudándote a llevar un mejor control de la insulina,
+            la glucosa y la alimentación de forma sencilla y organizada.
+          </p>
+          <div class="mt-10 flex justify-center gap-4">
+            <a
+              class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+              href="https://gly-monitor.web.app/login"
+            >
+              Registrate gratis
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recetas -->
+      <section
+        class="py-20 bg-white dark:bg-surface-dark overflow-hidden border-t border-gray-100 dark:border-gray-800"
+        id="recipes"
+      >
+        <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-12"
+          >
+            <div class="md:w-1/2 space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-gray-800 text-primary text-sm font-semibold shadow-sm"
+              >
+                <span class="material-icons-round text-sm"
+                  >restaurant_menu</span
+                >
+                Libro de Recetas
+              </div>
+              <h2
+                class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white"
+              >
+                Control de carbohidratos, conquistado.
+              </h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                Crea y guarda tus recetas favoritas. Glymo calcula
+                automáticamente los carbohidratos totales y la información
+                nutricional por porción, para que puedas tomar decisiones con
+                más seguridad y menos esfuerzo.
+              </p>
+              <ul class="space-y-3 mt-4">
+                <li
+                  class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                >
+                  <span class="material-icons-round text-green-500">
+                    check_circle
+                  </span>
+                  <span
+                    >Guarda recetas personalizadas como “Lasaña de mamá”</span
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                >
+                  <span class="material-icons-round text-green-500"
+                    >check_circle</span
+                  >
+                  <span>Ajusta tamaños de porción al instante</span>
+                </li>
+                <li
+                  class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                >
+                  <span class="material-icons-round text-green-500"
+                    >check_circle</span
+                  >
+                  <span
+                    >Accede a una base de datos de ingredientes comunes</span
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                >
+                  <span class="material-icons-round text-green-500"
+                    >check_circle</span
+                  >
+                  <span>
+                    Crea ingredientes personalizados con su información
+                    nutricional
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-1/2 relative">
+              <div
+                class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-6 max-w-sm mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500 border border-gray-100 dark:border-gray-700"
+              >
+                <div class="flex justify-between items-center mb-4">
+                  <p class="font-bold text-lg dark:text-white">
+                    Avena con Chía
+                  </p>
+                  <span class="material-icons-round text-gray-400">
+                    expand_less
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                  <div
+                    class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
+                  >
+                    <div class="text-xs">Carbohidratos</div>
+                    <div class="text-xl font-bold">38.5 g</div>
+                  </div>
+                  <div
+                    class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
+                  >
+                    <div class="text-xs">1 ración de HC son</div>
+                    <div class="text-xl font-bold">32 g</div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div
+                    class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
+                  >
+                    <span class="text-gray-600 dark:text-gray-300">
+                      Avena integral
+                    </span>
+                    <span class="font-medium text-gray-900 dark:text-white">
+                      50g
+                    </span>
+                  </div>
+                  <div
+                    class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
+                  >
+                    <span class="text-gray-600 dark:text-gray-300">
+                      Leche, semidesnatada
+                    </span>
+                    <span class="font-medium text-gray-900 dark:text-white">
+                      75g
+                    </span>
+                  </div>
+                  <div class="flex justify-between text-sm pb-1">
+                    <span class="text-gray-600 dark:text-gray-300">
+                      Semillas de chía
+                    </span>
+                    <span class="font-medium text-gray-900 dark:text-white">
+                      5g
+                    </span>
+                  </div>
+                </div>
+                <div class="mt-6 flex gap-3">
+                  <button
+                    class="flex-1 py-2 rounded-full border border-gray-200 dark:border-gray-600 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="flex-1 py-2 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark shadow-md shadow-primary/30"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section
+        class="py-20 bg-background-light dark:bg-background-dark"
+        id="testimonios"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+            >
+              Conoce las experiencias de nuestra comunidad de usuarios.
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+            >
+              <span
+                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
+              >
+                format_quote
+              </span>
+              <div class="relative z-10">
+                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "La calculadora de bolos ha cambiado el juego para los
+                  almuerzos de mi hija. Mucho menos estrés."
+                </p>
+                <div class="flex items-center gap-3">
+                  <div>
+                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Maria Pliego
+                    </h3>
+                    <span
+                      class="inline-block mt-1 px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium"
+                    >
+                      Usuaria por 6 años
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+            >
+              <span
+                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
+                >format_quote</span
+              >
+              <div class="relative z-10">
+                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "Finalmente, una interfaz que no se siente como un libro de
+                  texto médico. Es limpia y realmente útil."
+                </p>
+                <div class="flex items-center gap-3">
+                  <div>
+                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Aurelio Gomez
+                    </h3>
+                    <span
+                      class="inline-block mt-1 px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium"
+                      >Usuario por 6 años
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+            >
+              <span
+                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
+              >
+                format_quote
+              </span>
+              <div class="relative z-10">
+                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "La función de recetas me ahorra mucho tiempo cada día. No
+                  puedo imaginarme volver atrás."
+                </p>
+                <div class="flex items-center gap-3">
+                  <div>
+                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
+                      Elena Rodriguez
+                    </h3>
+                    <span
+                      class="inline-block mt-1 px-2 py-0.5 rounded bg-pink-50 dark:bg-primary/10 text-primary dark:text-primary-dark text-xs font-medium"
+                      >Usuaria por 2 años
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nuestra historia -->
+      <section
+        class="py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
+        id="historia"
+      >
+        <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="lg:w-1/2 order-2 lg:order-1">
+              <div
+                class="relative rounded-2xl overflow-hidden shadow-xl aspect-6/7 bg-gray-200 dark:bg-gray-800"
+              >
+                <img
+                  alt="Persona adulta usando Glymo para la gestión de su diabetes"
+                  class="object-cover w-full h-auto"
+                  src="./assets/img/using-glymo.webp"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-8"
+                >
+                  <p class="text-white font-medium italic">
+                    "Glymo nació para resolver un problema real y lleva años
+                    haciéndolo."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/2 order-1 lg:order-2">
+              <span
+                class="text-primary font-semibold tracking-wide uppercase text-sm"
+                >Nuestra Historia
+              </span>
+              <h2
+                class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
+              >
+                De una necesidad real a una herramienta pública.
+              </h2>
+              <div
+                class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+              >
+                <p>
+                  Hace varios años, un amigo cercano se enfrentó al diagnóstico
+                  de diabetes tipo 1 en su familia. La gestión diaria implicaba
+                  cálculos manuales, registros dispersos y un esfuerzo constante
+                  para mantener el control.
+                </p>
+                <p>
+                  Como desarrollador, creé una primera versión de Glymo para
+                  ayudarle a organizar el cálculo de bolos y el registro de
+                  comidas en un solo lugar. No era un producto comercial, sino
+                  una herramienta práctica pensada para el día a día.
+                </p>
+                <p>
+                  Con el paso del tiempo, la aplicación se convirtió en una
+                  parte habitual de su rutina. Durante años le ha ayudado a
+                  simplificar decisiones, mantener un mejor seguimiento y ganar
+                  tranquilidad.
+                </p>
+                <p>
+                  Esa experiencia real es la base de Glymo hoy: una aplicación
+                  diseñada para ofrecer una gestión de la diabetes más clara,
+                  sencilla y accesible a cualquier persona que la necesite.
                 </p>
               </div>
             </div>
           </div>
-          <div class="lg:w-1/2 order-1 lg:order-2">
-            <span
-              class="text-primary font-semibold tracking-wide uppercase text-sm"
-              >Nuestra Historia
-            </span>
-            <h2
-              class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
-            >
-              De una necesidad real a una herramienta pública.
-            </h2>
-            <div
-              class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
-            >
-              <p>
-                Hace varios años, un amigo cercano se enfrentó al diagnóstico de
-                diabetes tipo 1 en su familia. La gestión diaria implicaba
-                cálculos manuales, registros dispersos y un esfuerzo constante
-                para mantener el control.
-              </p>
-              <p>
-                Como desarrollador, creé una primera versión de Glymo para
-                ayudarle a organizar el cálculo de bolos y el registro de
-                comidas en un solo lugar. No era un producto comercial, sino una
-                herramienta práctica pensada para el día a día.
-              </p>
-              <p>
-                Con el paso del tiempo, la aplicación se convirtió en una parte
-                habitual de su rutina. Durante años le ha ayudado a simplificar
-                decisiones, mantener un mejor seguimiento y ganar tranquilidad.
-              </p>
-              <p>
-                Esa experiencia real es la base de Glymo hoy: una aplicación
-                diseñada para ofrecer una gestión de la diabetes más clara,
-                sencilla y accesible a cualquier persona que la necesite.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Preguntas frecuentes -->
-    <section
-      class="py-20 bg-background-light dark:bg-background-dark"
-      id="faqs"
-    >
-      <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2
-            class="text-3xl font-display font-bold text-gray-900 dark:text-white"
-          >
-            Preguntas frecuentes
-          </h2>
-        </div>
-        <div class="space-y-4">
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿Glymo sustituye a un médico o profesional sanitario?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              No. Glymo no es un dispositivo médico ni sustituye en ningún caso
-              la consulta con un profesional sanitario. La aplicación ofrece
-              recomendaciones y herramientas de seguimiento, pero cualquier
-              decisión médica debe tomarse siempre con tu equipo de salud.
-            </p>
-          </details>
-
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿Para qué tipo de diabetes está pensada la aplicación?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Glymo puede utilizarse en distintos tipos de diabetes. Aunque su
-              desarrollo inicial estuvo enfocado en diabetes tipo 1, sus
-              funciones son útiles para cualquier persona que necesite gestionar
-              su diabetes.
-            </p>
-          </details>
-
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿Puedo conectar Glymo con sensores de glucosa?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Glymo está trabajando en la integración con sensores de glucosa
-              como LibreLink y Dexcom. También puedes introducir tus lecturas de
-              glucosa manualmente.
-            </p>
-          </details>
-
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿Qué ocurre con mis datos personales y de salud?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Tus datos son privados y solo accesibles por ti. Glymo no comparte
-              la información registrada con terceros. Toda la información se
-              utiliza únicamente para ofrecerte las funciones de seguimiento y
-              visualización dentro de la aplicación.
-            </p>
-          </details>
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿Glymo es gratuita?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Actualmente, Glymo es gratuita. En el futuro podrían incorporarse
-              opciones como publicidad para ayudar a cubrir los costes de
-              mantenimiento y desarrollo de la plataforma.
-            </p>
-          </details>
-          <details
-            class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
-            >
-              ¿En qué dispositivos está disponible Glymo?
-              <span
-                class="material-icons-round transition-transform group-open:rotate-180"
-              >
-                expand_more
-              </span>
-            </summary>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-              Glymo está disponible en versión web. Está previsto su lanzamiento
-              en Android próximamente y, más adelante, en iOS.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Descarga la app -->
-    <section
-      class="py-24 bg-white dark:bg-surface-dark relative overflow-hidden"
-      id="descargar-app"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2
-            class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4"
-          >
-            Descarga la APP
-          </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-300">
-            Gestiona tu diabetes sobre la marcha con nuestra aplicacion.
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch"
-        >
-          <div
-            class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-700 p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <div
-              class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
-            >
-              <span class="material-icons-round text-4xl">android</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Android
-            </h3>
-            <p class="text-gray-500 dark:text-gray-300 mb-8">
-              Disponible en Google Play Store
-            </p>
-            <div
-              class="flex-1 flex flex-col items-center justify-center w-full"
-            >
-              <div
-                class="p-4 bg-white rounded-xl border border-gray-100 shadow-sm mb-4"
-              >
-                <img
-                  alt="QR Code Android"
-                  class="w-40 h-40 object-contain"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyw50sHoWKveN9LsJe7VkCTzAssB2fA1Gc1nYDURgK6vJ823NJjmXsfiWYyYRB0JImP5XU_Ix-ae4it3etOcDFBYGJUGi2O2stjMSgyRbTR0wDr3nWNn3EVkTKxElCluln5hPFdXEmOGCu_8CE2eI90OTb5amJUNdHY-Lk6-8obePZCAxFuc7mlnbCnUnySiUuYQ2ntD8s1gHS4BQAStQfIsODIfguFdBbcKtTyZEAq8Qj1MyRFYGAesMiunegkHAoVnPIGfc7R_I"
-                />
-              </div>
-              <p
-                class="text-sm font-medium text-gray-600 dark:text-gray-300 mb-6"
-              >
-                Escanea para Android
-              </p>
-            </div>
-            <button
-              class="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-gray-800 transition-colors shadow-lg"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L3.84,2.15C3.5,2.07 6.05,2.66 6.05,2.66Z"
-                ></path>
-              </svg>
-              <div class="text-left">
-                <div class="text-[10px] uppercase font-bold tracking-wider">
-                  Disponible en
-                </div>
-                <div class="text-lg font-bold leading-none">Google Play</div>
-              </div>
-            </button>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-700 p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <div
-              class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center mb-6 text-gray-900 dark:text-white"
-            >
-              <span class="material-icons-round text-4xl">apple</span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Instalación en iOS (Web App)
-            </h3>
-            <p class="text-gray-500 dark:text-gray-300 mb-10 max-w-sm">
-              Instala la aplicación directamente desde Safari para la mejor
-              experiencia.
-            </p>
-            <div class="flex-1 flex items-center justify-center w-full mb-8">
-              <div class="grid grid-cols-3 gap-6 w-full max-w-md relative">
-                <div
-                  class="absolute top-8 left-0 w-full h-0.5 bg-gray-100 dark:bg-gray-700 z-0"
-                ></div>
-                <div class="relative z-10 flex flex-col items-center group">
-                  <div
-                    class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
-                  >
-                    <span class="material-icons-round text-3xl">explore</span>
-                  </div>
-                  <span
-                    class="text-sm font-semibold text-gray-900 dark:text-white"
-                    >1. Safari</span
-                  >
-                  <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
-                    >Abre la web</span
-                  >
-                </div>
-                <div class="relative z-10 flex flex-col items-center group">
-                  <div
-                    class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
-                  >
-                    <span class="material-icons-round text-3xl">ios_share</span>
-                  </div>
-                  <span
-                    class="text-sm font-semibold text-gray-900 dark:text-white"
-                    >2. Compartir</span
-                  >
-                  <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
-                    >Botón central</span
-                  >
-                </div>
-                <div class="relative z-10 flex flex-col items-center group">
-                  <div
-                    class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
-                  >
-                    <span class="material-icons-round text-3xl">add_box</span>
-                  </div>
-                  <span
-                    class="text-sm font-semibold text-gray-900 dark:text-white"
-                    >3. Añadir</span
-                  >
-                  <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
-                    >A inicio</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-300 w-full"
-            >
-              <span
-                class="flex items-center justify-center gap-2 text-blue-900 dark:text-blue-400"
-              >
-                <span class="material-icons-round text-base text-blue-600"
-                  >info</span
-                >
-                Funciona como una app nativa
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <div
-      id="toast-container"
-      class="fixed top-4 right-4 left-4 sm:left-auto z-100 space-y-2"
-    ></div>
-    <section
-      class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
-      id="contacto"
-    >
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
-        >
-          <div class="text-center mb-10">
+      <!-- Preguntas frecuentes -->
+      <section
+        class="py-20 bg-background-light dark:bg-background-dark"
+        id="faqs"
+      >
+        <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
             <h2
               class="text-3xl font-display font-bold text-gray-900 dark:text-white"
             >
-              Ayúdanos a mejorar
+              Preguntas frecuentes
             </h2>
-            <p class="mt-4 text-gray-600 dark:text-gray-300">
-              Glymo está construido para la comunidad.
-            </p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">
-              ¿Tienes alguna sugerencia o solicitud de función? Nos encantaría
-              escucharte.
+          </div>
+          <div class="space-y-4">
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Glymo sustituye a un médico o profesional sanitario?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                No. Glymo no es un dispositivo médico ni sustituye en ningún
+                caso la consulta con un profesional sanitario. La aplicación
+                ofrece recomendaciones y herramientas de seguimiento, pero
+                cualquier decisión médica debe tomarse siempre con tu equipo de
+                salud.
+              </p>
+            </details>
+
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Para qué tipo de diabetes está pensada la aplicación?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Glymo puede utilizarse en distintos tipos de diabetes. Aunque su
+                desarrollo inicial estuvo enfocado en diabetes tipo 1, sus
+                funciones son útiles para cualquier persona que necesite
+                gestionar su diabetes.
+              </p>
+            </details>
+
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Puedo conectar Glymo con sensores de glucosa?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Glymo está trabajando en la integración con sensores de glucosa
+                como LibreLink y Dexcom. También puedes introducir tus lecturas
+                de glucosa manualmente.
+              </p>
+            </details>
+
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Qué ocurre con mis datos personales y de salud?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Tus datos son privados y solo accesibles por ti. Glymo no
+                comparte la información registrada con terceros. Toda la
+                información se utiliza únicamente para ofrecerte las funciones
+                de seguimiento y visualización dentro de la aplicación.
+              </p>
+            </details>
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Glymo es gratuita?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Actualmente, Glymo es gratuita. En el futuro podrían
+                incorporarse opciones como publicidad para ayudar a cubrir los
+                costes de mantenimiento y desarrollo de la plataforma.
+              </p>
+            </details>
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿En qué dispositivos está disponible Glymo?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Glymo está disponible en versión web. Está previsto su
+                lanzamiento en Android próximamente y, más adelante, en iOS.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Descarga la app -->
+      <section
+        class="py-24 bg-white dark:bg-surface-dark relative overflow-hidden"
+        id="descargar-app"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Descarga la APP
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300">
+              Gestiona tu diabetes sobre la marcha con nuestra aplicacion.
             </p>
           </div>
-          <form class="space-y-6" id="formulario-contacto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                  for="name"
-                >
-                  Nombre
-                </label>
-                <input
-                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                  id="name"
-                  name="name"
-                  placeholder="Tu nombre"
-                  type="text"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                  for="email"
-                  >Email</label
-                >
-                <input
-                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                  id="email"
-                  name="email"
-                  placeholder="tu@ejemplo.com"
-                  type="email"
-                  required
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                for="message"
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch"
+          >
+            <div
+              class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-700 p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div
+                class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
               >
-                Feedback
-              </label>
-              <textarea
-                class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
-                id="message"
-                name="message"
-                placeholder="Cuéntanos cómo podemos mejorar..."
-                rows="4"
-                required
-              ></textarea>
-            </div>
-            <div class="text-center">
+                <span class="material-icons-round text-4xl">android</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Android
+              </h3>
+              <p class="text-gray-500 dark:text-gray-300 mb-8">
+                Disponible en Google Play Store
+              </p>
+              <div
+                class="flex-1 flex flex-col items-center justify-center w-full"
+              >
+                <div
+                  class="p-4 bg-white rounded-xl border border-gray-100 shadow-sm mb-4"
+                >
+                  <img
+                    loading="lazy"
+                    alt="Android QR Code"
+                    class="w-40 h-40 object-contain"
+                    src="./assets/img/glymo-qr.webp"
+                    width="1000px"
+                    height="1000px"
+                  />
+                </div>
+                <p
+                  class="text-sm font-medium text-gray-600 dark:text-gray-300 mb-6"
+                >
+                  Escanea para Android
+                </p>
+              </div>
               <button
-                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
-                type="submit"
+                class="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-gray-800 transition-colors shadow-lg"
               >
-                Enviar Feedback
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L3.84,2.15C3.5,2.07 6.05,2.66 6.05,2.66Z"
+                  ></path>
+                </svg>
+                <div class="text-left">
+                  <div class="text-[10px] uppercase font-bold tracking-wider">
+                    Disponible en
+                  </div>
+                  <div class="text-lg font-bold leading-none">Google Play</div>
+                </div>
               </button>
             </div>
-          </form>
+            <div
+              class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl shadow-blue-900/5 border border-gray-100 dark:border-gray-700 p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div
+                class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-2xl flex items-center justify-center mb-6 text-gray-900 dark:text-white"
+              >
+                <span class="material-icons-round text-4xl">apple</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Instalación en iOS (Web App)
+              </h3>
+              <p class="text-gray-500 dark:text-gray-300 mb-10 max-w-sm">
+                Instala la aplicación directamente desde Safari para la mejor
+                experiencia.
+              </p>
+              <div class="flex-1 flex items-center justify-center w-full mb-8">
+                <div class="grid grid-cols-3 gap-6 w-full max-w-md relative">
+                  <div
+                    class="absolute top-8 left-0 w-full h-0.5 bg-gray-100 dark:bg-gray-700 z-0"
+                  ></div>
+                  <div class="relative z-10 flex flex-col items-center group">
+                    <div
+                      class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-icons-round text-3xl">explore</span>
+                    </div>
+                    <span
+                      class="text-sm font-semibold text-gray-900 dark:text-white"
+                      >1. Safari</span
+                    >
+                    <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
+                      >Abre la web</span
+                    >
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center group">
+                    <div
+                      class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-icons-round text-3xl"
+                        >ios_share</span
+                      >
+                    </div>
+                    <span
+                      class="text-sm font-semibold text-gray-900 dark:text-white"
+                      >2. Compartir</span
+                    >
+                    <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
+                      >Botón central</span
+                    >
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center group">
+                    <div
+                      class="w-16 h-16 bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm mb-3 group-hover:scale-110 transition-transform"
+                    >
+                      <span class="material-icons-round text-3xl">add_box</span>
+                    </div>
+                    <span
+                      class="text-sm font-semibold text-gray-900 dark:text-white"
+                      >3. Añadir</span
+                    >
+                    <span class="text-xs text-gray-500 dark:text-gray-200 mt-1"
+                      >A inicio</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-300 w-full"
+              >
+                <span
+                  class="flex items-center justify-center gap-2 text-blue-900 dark:text-blue-400"
+                >
+                  <span class="material-icons-round text-base text-blue-600"
+                    >info</span
+                  >
+                  Funciona como una app nativa
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Contact -->
+      <div
+        id="toast-container"
+        class="fixed top-4 right-4 left-4 sm:left-auto z-100 space-y-2"
+      ></div>
+      <section
+        class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
+        id="contacto"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
+          >
+            <div class="text-center mb-10">
+              <h2
+                class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+              >
+                Ayúdanos a mejorar
+              </h2>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                Glymo está construido para la comunidad.
+              </p>
+              <p class="mt-2 text-gray-600 dark:text-gray-300">
+                ¿Tienes alguna sugerencia o solicitud de función? Nos encantaría
+                escucharte.
+              </p>
+            </div>
+            <form class="space-y-6" id="formulario-contacto">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                    for="name"
+                  >
+                    Nombre
+                  </label>
+                  <input
+                    class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                    id="name"
+                    name="name"
+                    placeholder="Tu nombre"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                    for="email"
+                    >Email</label
+                  >
+                  <input
+                    class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                    id="email"
+                    name="email"
+                    placeholder="tu@ejemplo.com"
+                    type="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  for="message"
+                >
+                  Feedback
+                </label>
+                <textarea
+                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 dark:bg-gray-700 dark:text-white px-4 py-3"
+                  id="message"
+                  name="message"
+                  placeholder="Cuéntanos cómo podemos mejorar..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+                  type="submit"
+                >
+                  Enviar Feedback
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <glymo-footer></glymo-footer>
 

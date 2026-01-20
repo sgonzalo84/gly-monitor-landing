@@ -100,7 +100,7 @@ class GlymoLandingHeader extends HTMLElement {
                     alt="Logo de Glymo"
                     height="36px"
                     width="36px"
-                    src="./assets/logo/logo-50x50.png"
+                    src="./assets/logo/glymo-logo.webp"
                     loading="eager"
                 />
                 <span class="font-display font-bold text-2xl tracking-wide text-gray-900 dark:text-white">
@@ -131,7 +131,7 @@ class GlymoLandingHeader extends HTMLElement {
               >Preguntas frecuentes</a
             >
             <a
-              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
+              class="hidden lg:block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
               href="/#descargar-app"
               >Descargar app</a
             >
@@ -242,7 +242,7 @@ class GlymoLandingFooter extends HTMLElement {
                 Glymo
               </span>
             </div>
-            <p class="text-sm text-gray-500 dark:text-gray-300">
+            <p class="text-sm text-gray-600 dark:text-gray-300">
               Gestión de la diabetes, simplificada.
             </p>
           </div>
@@ -250,11 +250,11 @@ class GlymoLandingFooter extends HTMLElement {
             class="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full md:w-auto"
           >
             <div class="flex flex-col space-y-3">
-              <h4
+              <p
                 class="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider"
               >
                 Enlaces
-              </h4>
+              </p>
               <a
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                 href="#funcionalidades"
@@ -287,11 +287,11 @@ class GlymoLandingFooter extends HTMLElement {
               >
             </div>
             <div class="flex flex-col space-y-3">
-              <h4
+              <p
                 class="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider"
               >
                 Legal
-              </h4>
+              </p>
               <a
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                 href="terminos.html"
@@ -308,7 +308,7 @@ class GlymoLandingFooter extends HTMLElement {
         <div
           class="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 text-center"
         >
-          <p class="text-xs text-gray-400 dark:text-gray-500">
+          <p class="text-xs text-gray-600 dark:text-gray-500">
             © <span class="current-year"></span> Glymo. No es consejo médico.
             Consulta siempre a tu doctor.
           </p>
