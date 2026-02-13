@@ -134,7 +134,7 @@ class GlymoLandingHeader extends HTMLElement {
             <a
               class="hidden lg:block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
               href="/#descargar-app"
-              >Descargar app</a
+              >APPs</a
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
@@ -204,7 +204,7 @@ class GlymoLandingHeader extends HTMLElement {
           <a
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             href="/#descargar-app"
-            >Descargar app</a
+            >APPs</a
           >
           <a
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -274,7 +274,7 @@ class GlymoLandingFooter extends HTMLElement {
               <a
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                 href="#descargar-app"
-                >Descargar APP</a
+                >APPs</a
               >
               <a
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
