@@ -1171,9 +1171,6 @@
               >
                 Ayúdanos a mejorar
               </h2>
-              <p class="mt-4 text-gray-600 dark:text-gray-300">
-                Glymo está construido para la comunidad.
-              </p>
               <p class="mt-2 text-gray-600 dark:text-gray-300">
                 ¿Tienes alguna sugerencia o solicitud de función? Nos encantaría
                 escucharte.
@@ -1252,7 +1249,17 @@
 
     <glymo-footer></glymo-footer>
 
-    <script src="components.js" defer></script>
-    <script src="scripts.js" defer></script>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-52KWWLKD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
+    <script src="./js/components.js" defer></script>
+    <script src="./js/gtm-loader.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
   </body>
 </html>
