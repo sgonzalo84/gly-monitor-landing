@@ -1,6 +1,6 @@
 # Proyecto: Gly Monitor Landing
 
-Repositorio estático del sitio de aterrizaje.
+Repositorio estático de la landing page de Glymo.
 
 ## Requisitos
 - Node.js y npm instalados.
@@ -9,7 +9,7 @@ Repositorio estático del sitio de aterrizaje.
 Para trabajar en modo desarrollo:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 ## Antes de subir (build)

@@ -118,8 +118,8 @@ class GlymoLandingHeader extends HTMLElement {
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
-              href="/#testimonios"
-              >Testimonios</a
+              href="/#como-funciona"
+              >Cómo funciona</a
             >
             <a
               class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 transition-colors text-sm font-medium"
@@ -188,8 +188,8 @@ class GlymoLandingHeader extends HTMLElement {
           >
           <a
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="/#testimonios"
-            >Testimonios</a
+            href="/#como-funciona"
+            >Cómo funciona</a
           >
           <a
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -244,7 +244,7 @@ class GlymoLandingFooter extends HTMLElement {
               </span>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">
-              Gestión de la diabetes, simplificada.
+              Tu nutrición, simplificada: cuenta calorías y macros sin complicaciones.
             </p>
           </div>
           <div
@@ -260,6 +260,11 @@ class GlymoLandingFooter extends HTMLElement {
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                 href="#funcionalidades"
                 >Funcionalidades</a
+              >
+              <a
+                class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+                href="#como-funciona"
+                >Cómo funciona</a
               >
               <a
                 class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
@@ -303,6 +308,13 @@ class GlymoLandingFooter extends HTMLElement {
                 href="privacidad.html"
                 >Privacidad</a
               >
+              <button
+                type="button"
+                data-cookie-settings
+                class="text-left text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              >
+                Cookies
+              </button>
             </div>
           </div>
         </div>
@@ -310,8 +322,8 @@ class GlymoLandingFooter extends HTMLElement {
           class="border-t border-gray-100 dark:border-gray-800 mt-12 pt-8 text-center"
         >
           <p class="text-xs text-gray-600 dark:text-gray-500">
-            © <span class="current-year"></span> Glymo. No es consejo médico.
-            Consulta siempre a tu doctor.
+            © <span class="current-year"></span> Glymo. No sustituye el consejo de un
+            nutricionista o profesional sanitario.
           </p>
         </div>
       </div>

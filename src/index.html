@@ -3,25 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Gestión de la diabetes y control de insulina | Glymo</title>
+    <title>Glymo | App para contar calorías y macros y seguir tu dieta</title>
     <meta
       name="description"
-      content="Calcula la insulina para tus comidas. Registra dosis, glucosa y comidas, guarda recetas y visualiza tu evolución con gráficos y calendario."
+      content="Registra tus comidas con una foto, código de barras o tu catálogo. Calcula tus calorías y macros, guarda recetas y sigue tu progreso con gráficas y calendario."
     />
+    <link rel="canonical" href="https://www.glymo.es/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="apple-mobile-web-app-title" content="Glymo" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Glymo" />
     <meta
       property="og:title"
-      content="Glymo - Gestión de la diabetes simplificada"
+      content="Glymo - Cuenta tus calorías y macros sin complicaciones"
     />
     <meta
       property="og:description"
-      content="Calcula la insulina para tus comidas. Registra dosis, glucosa y comidas, guarda recetas y visualiza tu evolución con gráficos y calendario."
+      content="Registra tus comidas con una foto, código de barras o tu catálogo. Calcula tus calorías y macros, guarda recetas y sigue tu progreso con gráficas y calendario."
     />
     <meta
       property="og:image"
-      content="https://glymo.es/assets/favicon/favicon-96x96.png"
+      content="https://www.glymo.es/assets/img/og-glymo.png"
     />
-    <meta property="og:url" content="https://glymo.es/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.glymo.es/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Glymo - Cuenta tus calorías y macros sin complicaciones"
+    />
+    <meta
+      name="twitter:description"
+      content="Registra tus comidas con una foto, código de barras o tu catálogo y sigue tu progreso con gráficas y calendario."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.glymo.es/assets/img/og-glymo.png"
+    />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -70,6 +91,81 @@
         rel="stylesheet"
       />
     </noscript>
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Glymo",
+        "url": "https://www.glymo.es/",
+        "description": "App de nutrición para registrar comidas con foto, código de barras o catálogo propio, calcular objetivos de calorías y macronutrientes, guardar recetas y seguir el progreso con gráficas y calendario.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web, Android, iOS",
+        "inLanguage": "es",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Glymo sustituye a un nutricionista o a un profesional sanitario?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Glymo no es un dispositivo médico ni sustituye la consulta con un nutricionista o un profesional sanitario. Las estimaciones son orientativas y, si tienes una condición de salud o una pauta alimentaria específica, debes seguir siempre las indicaciones de tu profesional."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo calcula Glymo mis objetivos de calorías y macros?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Al registrarte, Glymo te pide tus datos físicos básicos y tus objetivos. A partir de ellos calcula tus objetivos diarios de calorías, proteínas, carbohidratos, grasas y fibra."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo usar los objetivos que me ha dado mi nutricionista?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. En los ajustes puedes modificar tus datos y objetivos, y también cambiar manualmente tus objetivos de macronutrientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿De qué formas puedo registrar mis comidas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes registrar tus comidas con una foto analizada con inteligencia artificial, escaneando el código de barras de un producto o eligiendo alimentos y recetas de tu catálogo. El análisis de imágenes es una estimación, por lo que conviene revisarlo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es BEDCA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BEDCA es la Base de Datos Española de Composición de Alimentos. En Glymo está disponible su lista de alimentos para que puedas usarla junto a tus propios alimentos y recetas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Glymo es gratuita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Actualmente, Glymo es gratuita. En el futuro podrían incorporarse opciones como publicidad para ayudar a cubrir los costes de mantenimiento y desarrollo de la plataforma."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased font-sans overflow-x-hidden"
@@ -89,23 +185,22 @@
           </span>
 
           <h1
-            class="text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 dark:text-white mb-6"
+            class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-gray-900 dark:text-white mb-6"
           >
-            Gestión de la diabetes, <br class="hidden md:block" />
+            Cuenta tus calorías y macros, <br class="hidden md:block" />
             <span
               class="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-600"
             >
-              simplificada.
+              sin complicaciones.
             </span>
           </h1>
 
           <h2
             class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
           >
-            Recomendaciones de insulina para tus comidas y un registro completo
-            de tu día a día. Guarda recetas, registra comidas, dosis de insulina
-            y lecturas de glucosa, y consulta tu evolución en gráficos y
-            calendario.
+            Registra tus comidas con una foto, escaneando un código de barras o
+            desde tu propio catálogo. Glymo calcula tus objetivos de calorías y
+            macronutrientes y te muestra tu progreso en gráficas y calendario.
           </h2>
 
           <!-- CTA -->
@@ -118,160 +213,233 @@
             </a>
           </div>
 
-          <!-- Glymo dashboard mockup -->
-          <div class="mt-16 lg:mt-20 relative mx-auto max-w-5xl">
-            <div
-              class="rounded-2xl bg-surface-light dark:bg-surface-dark shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden relative"
+          <!-- Macros -->
+          <ul
+            class="mt-8 flex flex-wrap justify-center gap-2 text-sm font-medium"
+          >
+            <li
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-200"
             >
+              Calorías
+            </li>
+            <li
+              class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200"
+            >
+              Proteínas
+            </li>
+            <li
+              class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 dark:bg-pink-900/40 dark:text-pink-200"
+            >
+              Carbohidratos
+            </li>
+            <li
+              class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-200"
+            >
+              Grasas
+            </li>
+            <li
+              class="px-3 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200"
+            >
+              Fibra
+            </li>
+          </ul>
+
+          <!-- Ilustración del hero (datos de ejemplo, dibujada en código) -->
+          <div class="mt-16 lg:mt-20 mx-auto max-w-4xl">
+            <div
+              class="flex flex-col md:flex-row items-center md:items-center justify-center gap-6 md:gap-0"
+              aria-hidden="true"
+            >
+              <!-- Foto del plato -->
               <div
-                class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 flex items-center justify-between"
+                class="order-2 md:order-1 w-full max-w-60 md:w-52 lg:w-60 md:-rotate-3 md:translate-y-8 md:-mr-3 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-2xl p-4 text-left"
               >
-                <div class="flex gap-2">
-                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                <div
+                  class="flex items-center gap-2 mb-3 text-sm font-semibold text-gray-900 dark:text-white"
+                >
+                  <span class="material-icons-round text-primary text-lg"
+                    >photo_camera</span
+                  >
+                  Haz una foto
+                </div>
+                <svg viewBox="0 0 200 200" class="w-full h-auto rounded-xl">
+                  <rect width="200" height="200" class="fill-amber-50 dark:fill-gray-700" />
+                  <circle cx="100" cy="100" r="78" fill="#ffffff" stroke="#e5e7eb" stroke-width="3" />
+                  <circle cx="100" cy="100" r="60" fill="#f9fafb" stroke="#f1f5f9" stroke-width="2" />
+                  <!-- pollo -->
+                  <ellipse cx="84" cy="90" rx="30" ry="19" transform="rotate(-20 84 90)" fill="#c2763a" />
+                  <ellipse cx="80" cy="85" rx="18" ry="9" transform="rotate(-20 80 85)" fill="#d99256" />
+                  <!-- patatas -->
+                  <rect x="112" y="104" width="22" height="18" rx="6" transform="rotate(15 123 113)" fill="#f4c95d" />
+                  <rect x="128" y="86" width="22" height="18" rx="6" transform="rotate(-10 139 95)" fill="#f7d77c" />
+                  <rect x="104" y="124" width="20" height="16" rx="6" transform="rotate(8 114 132)" fill="#eab945" />
+                  <!-- ensalada -->
+                  <ellipse cx="66" cy="124" rx="13" ry="7" transform="rotate(-30 66 124)" fill="#22c55e" />
+                  <ellipse cx="80" cy="134" rx="13" ry="7" transform="rotate(20 80 134)" fill="#16a34a" />
+                  <ellipse cx="58" cy="110" rx="11" ry="6" transform="rotate(-60 58 110)" fill="#4ade80" />
+                  <circle cx="94" cy="142" r="6" fill="#ef4444" />
+                  <!-- marco de escaneo -->
+                  <g fill="none" stroke="#d6006e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 46 V22 H46" />
+                    <path d="M154 22 H178 V46" />
+                    <path d="M22 154 V178 H46" />
+                    <path d="M154 178 H178 V154" />
+                  </g>
+                  <rect x="22" y="98" width="156" height="3" rx="1.5" fill="#d6006e" opacity="0.6" class="motion-safe:animate-pulse" />
+                </svg>
+                <div
+                  class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-pink-50 dark:bg-pink-900/20 px-3 py-2"
+                >
+                  <span class="text-sm font-medium text-gray-900 dark:text-white"
+                    >Pollo con patatas</span
+                  >
+                  <span class="text-xs font-bold text-primary whitespace-nowrap"
+                    >520 kcal</span
+                  >
                 </div>
               </div>
-              <div class="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 space-y-4">
-                  <div class="flex justify-between items-end mb-6">
-                    <div class="text-start">
-                      <div class="text-sm text-gray-600 dark:text-gray-300">
-                        Glucosa actual
-                      </div>
-                      <div
-                        class="text-4xl font-display font-bold text-gray-900 dark:text-white"
+
+              <!-- Tu día -->
+              <div
+                class="order-1 md:order-2 relative z-10 w-full max-w-sm md:w-80 lg:w-96 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-2xl p-5 text-left"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-primary text-xl"
+                      >today</span
+                    >
+                    <span class="font-semibold text-gray-900 dark:text-white"
+                      >Tu día</span
+                    >
+                  </div>
+                  <span
+                    class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200 font-medium"
+                    >En objetivo</span
+                  >
+                </div>
+                <div class="flex items-center gap-5">
+                  <div class="relative w-28 h-28 shrink-0">
+                    <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90">
+                      <circle cx="60" cy="60" r="52" fill="none" stroke-width="12" class="stroke-orange-100 dark:stroke-orange-900/40" />
+                      <circle cx="60" cy="60" r="52" fill="none" stroke-width="12" stroke-linecap="round" stroke="#f97316" stroke-dasharray="225.6 326.7" />
+                    </svg>
+                    <div
+                      class="absolute inset-0 flex flex-col items-center justify-center"
+                    >
+                      <span
+                        class="text-xl font-display font-bold text-gray-900 dark:text-white leading-none"
+                        >1.450</span
                       >
-                        104
-                        <span class="text-sm font-normal">mg/dL</span>
-                        <span
-                          class="material-icons-round text-green-500 text-3xl align-bottom"
-                          >arrow_forward</span
-                        >
-                      </div>
-                    </div>
-                    <div class="text-right">
-                      <div
-                        class="inline-block px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 text-sm font-medium"
+                      <span class="text-xs text-gray-500 dark:text-gray-300 mt-1"
+                        >de 2.100 kcal</span
                       >
-                        En Rango
-                      </div>
                     </div>
                   </div>
-                  <div
-                    class="h-48 w-full bg-linear-to-b from-blue-50 to-transparent dark:from-blue-900/20 dark:to-transparent rounded-lg border border-blue-100 dark:border-blue-900/30 relative overflow-hidden"
-                  >
-                    <svg class="w-full h-full" preserveAspectRatio="none">
-                      <path
-                        d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75 V150 H0 Z"
-                        fill="rgba(14, 165, 233, 0.2)"
-                      ></path>
-                      <path
-                        d="M0,80 Q50,40 100,70 T200,60 T300,90 T400,50 T500,75"
-                        fill="none"
-                        stroke="#0EA5E9"
-                        stroke-width="3"
-                      ></path>
-                      <line
-                        stroke="#EAB308"
-                        stroke-dasharray="4"
-                        stroke-width="1"
-                        x1="0"
-                        x2="500"
-                        y1="30"
-                        y2="30"
-                      ></line>
-                      <line
-                        stroke="#EF4444"
-                        stroke-dasharray="4"
-                        stroke-width="1"
-                        x1="0"
-                        x2="500"
-                        y1="120"
-                        y2="120"
-                      ></line>
-                    </svg>
+                  <div class="flex-1 space-y-3">
+                    <div>
+                      <div class="flex justify-between text-xs mb-1">
+                        <span class="font-medium text-gray-700 dark:text-gray-200">Proteínas</span>
+                        <span class="text-gray-500 dark:text-gray-300">98 / 140 g</span>
+                      </div>
+                      <div class="h-2 rounded-full bg-gray-100 dark:bg-gray-700">
+                        <div class="h-2 rounded-full bg-blue-500" style="width: 70%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-xs mb-1">
+                        <span class="font-medium text-gray-700 dark:text-gray-200">Hidratos</span>
+                        <span class="text-gray-500 dark:text-gray-300">138 / 230 g</span>
+                      </div>
+                      <div class="h-2 rounded-full bg-gray-100 dark:bg-gray-700">
+                        <div class="h-2 rounded-full bg-pink-500" style="width: 60%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-xs mb-1">
+                        <span class="font-medium text-gray-700 dark:text-gray-200">Grasas</span>
+                        <span class="text-gray-500 dark:text-gray-300">52 / 70 g</span>
+                      </div>
+                      <div class="h-2 rounded-full bg-gray-100 dark:bg-gray-700">
+                        <div class="h-2 rounded-full bg-purple-500" style="width: 74%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-xs mb-1">
+                        <span class="font-medium text-gray-700 dark:text-gray-200">Fibra</span>
+                        <span class="text-gray-500 dark:text-gray-300">19 / 30 g</span>
+                      </div>
+                      <div class="h-2 rounded-full bg-gray-100 dark:bg-gray-700">
+                        <div class="h-2 rounded-full bg-green-600" style="width: 63%"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
-                  class="space-y-4 border-l border-gray-100 dark:border-gray-700 pl-0 md:pl-8"
+                  class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between text-sm"
                 >
-                  <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
-                    Eventos de Hoy
-                  </h3>
-                  <div class="flex items-start gap-3">
-                    <div
-                      class="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-primary shrink-0"
-                    >
-                      <span class="material-icons-round text-sm"
-                        >restaurant</span
-                      >
-                    </div>
-                    <div class="text-start">
-                      <div
-                        class="text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Almuerzo
-                      </div>
-                      <div class="text-xs text-gray-500 dark:text-gray-300">
-                        Plátano, 20g HC
-                      </div>
-                    </div>
-                    <div
-                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                    >
-                      11:30
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <div
-                      class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 shrink-0"
-                    >
-                      <span class="material-icons-round text-sm">vaccines</span>
-                    </div>
-                    <div class="text-start">
-                      <div
-                        class="text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Insulina
-                      </div>
-                      <div class="text-xs text-gray-500 dark:text-gray-300">
-                        1.5 UD Rápida
-                      </div>
-                    </div>
-                    <div
-                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                    >
-                      10:15
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <div
-                      class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 shrink-0"
-                    >
-                      <span class="material-icons-round text-sm"
-                        >water_drop</span
-                      >
-                    </div>
-                    <div class="text-start">
-                      <div
-                        class="text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Lectura
-                      </div>
-                      <div class="text-xs text-gray-500 dark:text-gray-300">
-                        100 mg/dL
-                      </div>
-                    </div>
-                    <div
-                      class="ml-auto text-xs font-semibold text-gray-900 dark:text-white"
-                    >
-                      08:00
-                    </div>
-                  </div>
+                  <span class="text-gray-500 dark:text-gray-300">Te quedan</span>
+                  <span class="font-bold text-gray-900 dark:text-white">650 kcal</span>
+                </div>
+              </div>
+
+              <!-- Código de barras -->
+              <div
+                class="order-3 hidden md:block md:w-44 lg:w-52 md:rotate-3 md:translate-y-12 md:-ml-3 rounded-2xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-700 shadow-2xl p-4 text-left"
+              >
+                <div
+                  class="flex items-center gap-2 mb-3 text-sm font-semibold text-gray-900 dark:text-white"
+                >
+                  <span class="material-icons-round text-primary text-lg"
+                    >qr_code_scanner</span
+                  >
+                  Escanea
+                </div>
+                <div class="rounded-xl bg-white border border-gray-200 p-2">
+                  <svg viewBox="0 0 160 70" class="w-full h-auto">
+                    <g fill="#111827">
+                    <rect x="8" y="6" width="3" height="58" />
+                    <rect x="14" y="6" width="4" height="58" />
+                    <rect x="20" y="6" width="2" height="58" />
+                    <rect x="24" y="6" width="3" height="58" />
+                    <rect x="29" y="6" width="5" height="58" />
+                    <rect x="37" y="6" width="2" height="58" />
+                    <rect x="41" y="6" width="4" height="58" />
+                    <rect x="49" y="6" width="2" height="58" />
+                    <rect x="54" y="6" width="2" height="58" />
+                    <rect x="60" y="6" width="2" height="58" />
+                    <rect x="64" y="6" width="2" height="58" />
+                    <rect x="68" y="6" width="5" height="58" />
+                    <rect x="77" y="6" width="2" height="58" />
+                    <rect x="82" y="6" width="2" height="58" />
+                    <rect x="87" y="6" width="3" height="58" />
+                    <rect x="94" y="6" width="2" height="58" />
+                    <rect x="98" y="6" width="5" height="58" />
+                    <rect x="106" y="6" width="5" height="58" />
+                    <rect x="114" y="6" width="2" height="58" />
+                    <rect x="119" y="6" width="3" height="58" />
+                    <rect x="124" y="6" width="5" height="58" />
+                    <rect x="131" y="6" width="5" height="58" />
+                    <rect x="138" y="6" width="5" height="58" />
+                    <rect x="146" y="6" width="4" height="58" />
+                    </g>
+                    <rect x="4" y="33" width="152" height="3" rx="1.5" fill="#d6006e" opacity="0.7" class="motion-safe:animate-pulse" />
+                  </svg>
+                </div>
+                <div
+                  class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-pink-50 dark:bg-pink-900/20 px-3 py-2"
+                >
+                  <span class="text-sm font-medium text-gray-900 dark:text-white"
+                    >Yogur natural</span
+                  >
+                  <span class="text-xs font-bold text-primary whitespace-nowrap"
+                    >62 kcal</span
+                  >
                 </div>
               </div>
             </div>
+            <p class="mt-10 md:mt-14 text-xs text-gray-500 dark:text-gray-400">
+              Ilustración con datos de ejemplo.
+            </p>
           </div>
         </div>
 
@@ -298,12 +466,12 @@
             <h2
               class="animate-enter text-3xl font-display font-bold sm:text-4xl"
             >
-              Todo lo que necesitas para la gestión diaria de la diabetes
+              Todo lo que necesitas para controlar tu alimentación
             </h2>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <!-- Recomendaciones de insulina -->
+            <!-- Objetivos personalizados -->
             <div
               class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
             >
@@ -315,15 +483,16 @@
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Recomendaciones de insulina
+                Objetivos personalizados
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Obtén recomendaciones de insulina para tus comidas según tus
-                parámetros personales.
+                Cuéntanos tus datos físicos y tus metas y Glymo calcula tus
+                objetivos diarios de calorías, proteínas, carbohidratos, grasas
+                y fibra.
               </p>
             </div>
 
-            <!-- Registro de comidas y recetas -->
+            <!-- Registro con foto -->
             <div
               class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
             >
@@ -331,19 +500,19 @@
                 class="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center mb-6 text-primary"
               >
                 <span class="material-icons-round text-2xl" aria-hidden="true">
-                  restaurant
+                  photo_camera
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Registro de comidas y recetas
+                Registra comidas con una foto
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Registra tus comidas diarias y guarda recetas habituales para
-                reutilizarlas fácilmente.
+                Haz una foto a tu plato y deja que la inteligencia artificial
+                analice la comida para que la registres en segundos.
               </p>
             </div>
 
-            <!-- Registro de dosis de insulina -->
+            <!-- Código de barras -->
             <div
               class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
             >
@@ -351,19 +520,19 @@
                 class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400"
               >
                 <span class="material-icons-round text-2xl" aria-hidden="true">
-                  vaccines
+                  qr_code_scanner
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Registro de dosis de insulina
+                Escáner de código de barras
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Lleva un control claro de las dosis de insulina administradas a
-                lo largo del día.
+                Escanea el código de barras de un producto envasado y añádelo a
+                tu día sin tener que buscarlo.
               </p>
             </div>
 
-            <!-- Registro de glucosa -->
+            <!-- Catálogo -->
             <div
               class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300"
             >
@@ -371,15 +540,15 @@
                 class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600 dark:text-green-400"
               >
                 <span class="material-icons-round text-2xl" aria-hidden="true">
-                  water_drop
+                  menu_book
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Registro de niveles de glucosa
+                Catálogo propio y base BEDCA
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Anota tus lecturas de glucosa y revisa su evolución con el paso
-                del tiempo.
+                Crea tus alimentos y recetas y accede a la lista de alimentos de
+                la base de datos BEDCA.
               </p>
             </div>
 
@@ -391,15 +560,15 @@
                 class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center mb-6 text-yellow-600 dark:text-yellow-400"
               >
                 <span class="material-icons-round text-2xl" aria-hidden="true">
-                  show_chart
+                  bar_chart
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Gráficos claros y visuales
+                Gráficas de progreso
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Visualiza comidas, insulina y glucosa en gráficos fáciles de
-                interpretar.
+                Compara cada semana tus calorías con tu objetivo y mira qué
+                porcentaje de cada macro alcanzas día a día.
               </p>
             </div>
 
@@ -415,11 +584,11 @@
                 </span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Calendario de seguimiento
+                Calendario de comidas
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Consulta tu historial diario de comidas, insulina y glucosa en
-                un calendario visual.
+                Consulta tus comidas de la semana y repítelas en otros días con
+                un par de toques.
               </p>
             </div>
           </div>
@@ -427,22 +596,22 @@
 
         <div class="animate-enter text-center max-w-3xl mx-auto mt-8 px-4">
           <p class="text-xl text-gray-900 dark:text-gray-300">
-            Una herramienta pensada para facilitar la gestión de la diabetes en
-            el día a día, ayudándote a llevar un mejor control de la insulina,
-            la glucosa y la alimentación de forma sencilla y organizada.
+            Una herramienta pensada para que llevar el control de lo que comes
+            sea sencillo: registra, revisa tus calorías y macros y sigue tu
+            evolución sin perder tiempo.
           </p>
           <div class="mt-10 flex justify-center gap-4">
             <a
               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base uppercase tracking-wide font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
               href="https://app.glymo.es/crear-cuenta"
             >
-              Registrate gratis
+              Regístrate gratis
             </a>
           </div>
         </div>
       </section>
 
-      <!-- Recetas -->
+      <!-- Catálogo y recetas -->
       <section
         class="py-20 bg-white dark:bg-surface-dark overflow-hidden border-t border-gray-100 dark:border-gray-800"
         id="recipes"
@@ -458,18 +627,18 @@
                 <span class="material-icons-round text-sm"
                   >restaurant_menu</span
                 >
-                Libro de Recetas
+                Catálogo y recetas
               </div>
               <h2
                 class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white"
               >
-                Control de carbohidratos, conquistado.
+                Tus recetas, con los macros ya calculados.
               </h2>
               <p class="text-lg text-gray-700 dark:text-gray-300">
-                Crea y guarda tus recetas favoritas. Glymo calcula
-                automáticamente los carbohidratos totales y la información
-                nutricional por porción, para que puedas tomar decisiones con
-                más seguridad y menos esfuerzo.
+                Crea tus recetas con tus ingredientes y Glymo calcula la
+                energía, la grasa, los hidratos, la fibra y las proteínas de la
+                receta completa o por cada 100 g. Al registrar el consumo,
+                indicas cuántos gramos has comido.
               </p>
               <ul class="space-y-3 mt-4">
                 <li
@@ -479,7 +648,8 @@
                     check_circle
                   </span>
                   <span
-                    >Guarda recetas personalizadas como “Lasaña de mamá”</span
+                    >Guarda recetas personalizadas, como tu “Avena con
+                    chía”</span
                   >
                 </li>
                 <li
@@ -488,7 +658,7 @@
                   <span class="material-icons-round text-green-500"
                     >check_circle</span
                   >
-                  <span>Ajusta tamaños de porción al instante</span>
+                  <span>Consulta la información nutricional por receta o por 100 g</span>
                 </li>
                 <li
                   class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
@@ -496,9 +666,7 @@
                   <span class="material-icons-round text-green-500"
                     >check_circle</span
                   >
-                  <span
-                    >Accede a una base de datos de ingredientes comunes</span
-                  >
+                  <span>Accede a la lista de alimentos de la base BEDCA</span>
                 </li>
                 <li
                   class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
@@ -507,176 +675,163 @@
                     >check_circle</span
                   >
                   <span>
-                    Crea ingredientes personalizados con su información
-                    nutricional
+                    Crea alimentos propios con su información nutricional
                   </span>
+                </li>
+                <li
+                  class="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                >
+                  <span class="material-icons-round text-green-500"
+                    >check_circle</span
+                  >
+                  <span>Repite con un toque lo que comiste ayer</span>
                 </li>
               </ul>
             </div>
-            <div class="md:w-1/2 relative">
+            <div class="md:w-1/2 relative flex justify-center">
               <div
-                class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-2xl p-6 max-w-sm mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500 border border-gray-100 dark:border-gray-700"
+                class="w-60 lg:w-64 shrink-0 rounded-4xl border-8 border-gray-900 dark:border-gray-700 bg-gray-900 shadow-2xl overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500"
               >
-                <div class="flex justify-between items-center mb-4">
-                  <p class="font-bold text-lg dark:text-white">
-                    Avena con Chía
-                  </p>
-                  <span class="material-icons-round text-gray-400">
-                    expand_less
-                  </span>
-                </div>
-                <div class="grid grid-cols-2 gap-3 mb-6">
-                  <div
-                    class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
-                  >
-                    <div class="text-xs">Carbohidratos</div>
-                    <div class="text-xl font-bold">38.5 g</div>
-                  </div>
-                  <div
-                    class="bg-pink-200 p-3 rounded-lg text-center text-gray-900"
-                  >
-                    <div class="text-xs">1 ración de HC son</div>
-                    <div class="text-xl font-bold">32 g</div>
-                  </div>
-                </div>
-                <div class="space-y-3">
-                  <div
-                    class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
-                  >
-                    <span class="text-gray-600 dark:text-gray-300">
-                      Avena integral
-                    </span>
-                    <span class="font-medium text-gray-900 dark:text-white">
-                      50g
-                    </span>
-                  </div>
-                  <div
-                    class="flex justify-between text-sm border-b border-gray-100 dark:border-gray-700 pb-2"
-                  >
-                    <span class="text-gray-600 dark:text-gray-300">
-                      Leche, semidesnatada
-                    </span>
-                    <span class="font-medium text-gray-900 dark:text-white">
-                      75g
-                    </span>
-                  </div>
-                  <div class="flex justify-between text-sm pb-1">
-                    <span class="text-gray-600 dark:text-gray-300">
-                      Semillas de chía
-                    </span>
-                    <span class="font-medium text-gray-900 dark:text-white">
-                      5g
-                    </span>
-                  </div>
-                </div>
-                <div class="mt-6 flex gap-3">
-                  <button
-                    class="flex-1 py-2 rounded-full border border-gray-200 dark:border-gray-600 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 dark:text-white"
-                  >
-                    Editar
-                  </button>
-                  <button
-                    class="flex-1 py-2 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark shadow-md shadow-primary/30"
-                  >
-                    Agregar
-                  </button>
-                </div>
+                <img
+                  alt="Detalle de la receta Avena con chía con su información nutricional en Glymo"
+                  class="w-full h-auto"
+                  src="./assets/img/app-receta.webp"
+                  width="393"
+                  height="852"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Testimonios -->
+      <!-- Cómo funciona -->
       <section
         class="py-20 bg-background-light dark:bg-background-dark"
-        id="testimonios"
+        id="como-funciona"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
+          <div class="text-center max-w-3xl mx-auto mb-16">
             <h2
-              class="text-3xl font-display font-bold text-gray-900 dark:text-white"
+              class="text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
             >
-              Conoce las experiencias de nuestra comunidad de usuarios.
+              Cómo funciona Glymo
             </h2>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+              De tus datos a tu progreso en tres pasos.
+            </p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
-              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300"
             >
-              <span
-                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
+              <div
+                class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center mb-5"
               >
-                format_quote
-              </span>
-              <div class="relative z-10">
-                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                  "La calculadora de bolos ha cambiado el juego para los
-                  almuerzos de mi hija. Mucho menos estrés."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div>
-                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Maria Pliego
-                    </h3>
-                    <span
-                      class="inline-block mt-1 px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium"
-                    >
-                      Usuaria por 6 años
-                    </span>
-                  </div>
-                </div>
+                1
               </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Cuéntanos sobre ti
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Al registrarte indicas tus datos físicos básicos y tus
+                objetivos. Con ellos calculamos tus calorías y macros diarios.
+                ¿Tu nutricionista te ha dado otros? Puedes cambiarlos a mano en
+                los ajustes.
+              </p>
             </div>
             <div
-              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300"
             >
-              <span
-                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
-                >format_quote</span
+              <div
+                class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center mb-5"
               >
-              <div class="relative z-10">
-                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                  "Finalmente, una interfaz que no se siente como un libro de
-                  texto médico. Es limpia y realmente útil."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div>
-                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Aurelio Gomez
-                    </h3>
-                    <span
-                      class="inline-block mt-1 px-2 py-0.5 rounded bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-medium"
-                      >Usuario por 6 años
-                    </span>
-                  </div>
-                </div>
+                2
               </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Registra lo que comes
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Haz una foto a tu plato, escanea el código de barras de un
+                producto o elige alimentos y recetas de tu catálogo.
+              </p>
             </div>
             <div
-              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 relative hover:shadow-lg transition-shadow duration-300"
+              class="animate-enter bg-surface-light dark:bg-surface-dark rounded-xl p-8 shadow-md border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300"
             >
-              <span
-                class="material-icons-round text-primary/20 text-7xl! absolute top-1 left-1 z-0"
+              <div
+                class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center mb-5"
               >
-                format_quote
+                3
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Sigue tu progreso
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Consulta cuánto te queda por consumir hoy, revisa tus gráficas
+                semanales y organiza tus comidas en el calendario.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Progreso -->
+      <section
+        class="py-20 bg-white dark:bg-surface-dark overflow-hidden border-t border-gray-100 dark:border-gray-800"
+        id="progreso"
+      >
+        <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="lg:w-1/2 space-y-6">
+              <span
+                class="text-primary font-semibold tracking-wide uppercase text-sm"
+                >Seguimiento
               </span>
-              <div class="relative z-10">
-                <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
-                  "La función de recetas me ahorra mucho tiempo cada día. No
-                  puedo imaginarme volver atrás."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div>
-                    <h3 class="font-bold text-gray-900 dark:text-white text-sm">
-                      Elena Rodriguez
-                    </h3>
-                    <span
-                      class="inline-block mt-1 px-2 py-0.5 rounded bg-pink-50 dark:bg-primary/10 text-primary dark:text-primary-dark text-xs font-medium"
-                      >Usuaria por 2 años
-                    </span>
-                  </div>
-                </div>
+              <h2
+                class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white"
+              >
+                Ve cómo avanza tu semana de un vistazo.
+              </h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                Las gráficas te muestran tu media diaria de calorías frente a tu
+                objetivo, lo que llevas registrado y lo que te queda para
+                completar la semana, además del porcentaje de cada macronutriente
+                que alcanzas cada día.
+              </p>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                En el calendario ves tus comidas por franjas del día y puedes
+                repetirlas en otros días para ahorrar tiempo.
+              </p>
+            </div>
+            <div class="lg:w-1/2 flex justify-center gap-4 sm:gap-8">
+              <div
+                class="w-40 sm:w-52 shrink-0 rounded-4xl border-8 border-gray-900 dark:border-gray-700 bg-gray-900 shadow-2xl overflow-hidden"
+              >
+                <img
+                  alt="Gráfica semanal de calorías frente al objetivo y macronutrientes por día en Glymo"
+                  class="w-full h-auto"
+                  src="./assets/img/app-graficas.webp"
+                  width="393"
+                  height="852"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div
+                class="w-40 sm:w-52 shrink-0 translate-y-8 rounded-4xl border-8 border-gray-900 dark:border-gray-700 bg-gray-900 shadow-2xl overflow-hidden"
+              >
+                <img
+                  alt="Calendario semanal de comidas de Glymo por desayuno, almuerzo y comida"
+                  class="w-full h-auto"
+                  src="./assets/img/app-calendario.webp"
+                  width="393"
+                  height="852"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
@@ -685,7 +840,7 @@
 
       <!-- Nuestra historia -->
       <section
-        class="py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
+        class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
         id="historia"
       >
         <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -695,7 +850,7 @@
                 class="relative rounded-2xl overflow-hidden shadow-xl aspect-6/7 bg-gray-200 dark:bg-gray-800"
               >
                 <img
-                  alt="Persona adulta usando Glymo para la gestión de su diabetes"
+                  alt="Persona usando Glymo en el móvil"
                   class="object-cover w-full h-auto"
                   src="./assets/img/using-glymo.webp"
                   loading="lazy"
@@ -707,8 +862,8 @@
                   class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-8"
                 >
                   <p class="text-white font-medium italic">
-                    "Glymo nació para resolver un problema real y lleva años
-                    haciéndolo."
+                    "Glymo nació para resolver un problema real y ha ido
+                    creciendo con quienes la usan."
                   </p>
                 </div>
               </div>
@@ -721,33 +876,27 @@
               <h2
                 class="mt-2 text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl"
               >
-                De una necesidad real a una herramienta pública.
+                De una necesidad real a una app de nutrición.
               </h2>
               <div
                 class="mt-6 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
               >
                 <p>
-                  Hace varios años, un amigo cercano se enfrentó al diagnóstico
-                  de diabetes tipo 1 en su familia. La gestión diaria implicaba
-                  cálculos manuales, registros dispersos y un esfuerzo constante
-                  para mantener el control.
+                  Glymo empezó hace años como una herramienta personal. Como
+                  desarrollador, creé una primera versión para ayudar a un amigo
+                  cercano a organizar sus comidas y sus cálculos diarios en un
+                  solo lugar.
                 </p>
                 <p>
-                  Como desarrollador, creé una primera versión de Glymo para
-                  ayudarle a organizar el cálculo de bolos y el registro de
-                  comidas en un solo lugar. No era un producto comercial, sino
-                  una herramienta práctica pensada para el día a día.
+                  Con el tiempo, la aplicación fue evolucionando y hoy se centra
+                  en la nutrición: registrar lo que comes de la forma más rápida
+                  posible, conocer tus calorías y macronutrientes y seguir tu
+                  progreso.
                 </p>
                 <p>
-                  Con el paso del tiempo, la aplicación se convirtió en una
-                  parte habitual de su rutina. Durante años le ha ayudado a
-                  simplificar decisiones, mantener un mejor seguimiento y ganar
-                  tranquilidad.
-                </p>
-                <p>
-                  Esa experiencia real es la base de Glymo hoy: una aplicación
-                  diseñada para ofrecer una gestión de la diabetes más clara,
-                  sencilla y accesible a cualquier persona que la necesite.
+                  Esa base sigue siendo la idea de Glymo: una herramienta clara,
+                  sencilla y pensada para el día a día, accesible a cualquier
+                  persona que quiera cuidar su alimentación.
                 </p>
               </div>
             </div>
@@ -757,7 +906,7 @@
 
       <!-- Preguntas frecuentes -->
       <section
-        class="py-20 bg-background-light dark:bg-background-dark"
+        class="py-20 bg-white dark:bg-surface-dark"
         id="faqs"
       >
         <div class="animate-enter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -775,7 +924,8 @@
               <summary
                 class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
               >
-                ¿Glymo sustituye a un médico o profesional sanitario?
+                ¿Glymo sustituye a un nutricionista o a un profesional
+                sanitario?
                 <span
                   class="material-icons-round transition-transform group-open:rotate-180"
                 >
@@ -783,11 +933,11 @@
                 </span>
               </summary>
               <p class="mt-4 text-gray-700 dark:text-gray-300">
-                No. Glymo no es un dispositivo médico ni sustituye en ningún
-                caso la consulta con un profesional sanitario. La aplicación
-                ofrece recomendaciones y herramientas de seguimiento, pero
-                cualquier decisión médica debe tomarse siempre con tu equipo de
-                salud.
+                No. Glymo no es un dispositivo médico ni sustituye la consulta
+                con un nutricionista o un profesional sanitario. Las
+                estimaciones son orientativas y, si tienes una condición de
+                salud o una pauta alimentaria específica, debes seguir siempre
+                las indicaciones de tu profesional.
               </p>
             </details>
 
@@ -797,7 +947,7 @@
               <summary
                 class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
               >
-                ¿Para qué tipo de diabetes está pensada la aplicación?
+                ¿Cómo calcula Glymo mis objetivos de calorías y macros?
                 <span
                   class="material-icons-round transition-transform group-open:rotate-180"
                 >
@@ -805,10 +955,9 @@
                 </span>
               </summary>
               <p class="mt-4 text-gray-700 dark:text-gray-300">
-                Glymo puede utilizarse en distintos tipos de diabetes. Aunque su
-                desarrollo inicial estuvo enfocado en diabetes tipo 1, sus
-                funciones son útiles para cualquier persona que necesite
-                gestionar su diabetes.
+                Al registrarte, Glymo te pide tus datos físicos básicos y tus
+                objetivos. A partir de ellos calcula tus objetivos diarios de
+                calorías, proteínas, carbohidratos, grasas y fibra.
               </p>
             </details>
 
@@ -818,7 +967,7 @@
               <summary
                 class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
               >
-                ¿Puedo conectar Glymo con sensores de glucosa?
+                ¿Puedo usar los objetivos que me ha dado mi nutricionista?
                 <span
                   class="material-icons-round transition-transform group-open:rotate-180"
                 >
@@ -826,9 +975,8 @@
                 </span>
               </summary>
               <p class="mt-4 text-gray-700 dark:text-gray-300">
-                Glymo está trabajando en la integración con sensores de glucosa
-                como LibreLink y Dexcom. También puedes introducir tus lecturas
-                de glucosa manualmente.
+                Sí. En los ajustes puedes modificar tus datos y objetivos, y
+                también cambiar manualmente tus objetivos de macronutrientes.
               </p>
             </details>
 
@@ -838,7 +986,7 @@
               <summary
                 class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
               >
-                ¿Qué ocurre con mis datos personales y de salud?
+                ¿De qué formas puedo registrar mis comidas?
                 <span
                   class="material-icons-round transition-transform group-open:rotate-180"
                 >
@@ -846,12 +994,59 @@
                 </span>
               </summary>
               <p class="mt-4 text-gray-700 dark:text-gray-300">
-                Tus datos son privados y solo accesibles por ti. Glymo no
-                comparte la información registrada con terceros. Toda la
-                información se utiliza únicamente para ofrecerte las funciones
-                de seguimiento y visualización dentro de la aplicación.
+                Puedes hacerlo con una foto analizada con inteligencia
+                artificial, escaneando el código de barras de un producto o
+                eligiendo alimentos y recetas de tu catálogo. El análisis de
+                imágenes es una estimación, por lo que conviene revisarlo.
               </p>
             </details>
+
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Qué es BEDCA?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                BEDCA es la Base de Datos Española de Composición de Alimentos.
+                En Glymo está disponible su lista de alimentos para que puedas
+                usarla junto a tus propios alimentos y recetas.
+              </p>
+            </details>
+
+            <details
+              class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between font-semibold text-gray-900 dark:text-white"
+              >
+                ¿Qué ocurre con mis datos personales?
+                <span
+                  class="material-icons-round transition-transform group-open:rotate-180"
+                >
+                  expand_more
+                </span>
+              </summary>
+              <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Tus datos son privados y solo accesibles por ti. Glymo no vende
+                tu información y solo la utiliza para ofrecerte las funciones de
+                seguimiento y visualización dentro de la aplicación. Si usas el
+                registro por foto, la imagen se envía a Gemini (Google) para su
+                análisis, sin ningún dato que te identifique. Puedes leer todos
+                los detalles en nuestra
+                <a class="underline" href="/privacidad.html"
+                  >política de privacidad</a
+                >.
+              </p>
+            </details>
+
             <details
               class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
             >
@@ -871,6 +1066,7 @@
                 costes de mantenimiento y desarrollo de la plataforma.
               </p>
             </details>
+
             <details
               class="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark p-6"
             >
@@ -895,7 +1091,7 @@
 
       <!-- Descarga la app -->
       <section
-        class="py-24 bg-white dark:bg-surface-dark relative overflow-hidden"
+        class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden"
         id="descargar-app"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -906,7 +1102,7 @@
               Descarga la APP
             </h2>
             <p class="text-xl text-gray-600 dark:text-gray-300">
-              Gestiona tu diabetes sobre la marcha con nuestra aplicacion.
+              Controla tu alimentación sobre la marcha con nuestra aplicacion.
             </p> -->
             <h2
               class="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4"
@@ -1158,12 +1354,12 @@
         class="fixed top-4 right-4 left-4 sm:left-auto z-100 space-y-2"
       ></div>
       <section
-        class="animate-enter py-20 bg-background-light dark:bg-background-dark transition-colors duration-300"
+        class="animate-enter py-20 bg-white dark:bg-surface-dark transition-colors duration-300"
         id="contacto"
       >
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-inner"
+            class="bg-surface-light dark:bg-background-dark rounded-2xl p-8 md:p-12 shadow-inner"
           >
             <div class="text-center mb-10">
               <h2
@@ -1249,17 +1445,8 @@
 
     <glymo-footer></glymo-footer>
 
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-52KWWLKD"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-
     <script src="./js/components.js" defer></script>
-    <script src="./js/gtm-loader.js" defer></script>
+    <script src="./js/consent.js" defer></script>
     <script src="./js/scripts.js" defer></script>
   </body>
 </html>

@@ -1,15 +1,15 @@
 {
-  "name": "gly-monitor-landing",
+  "name": "glymo-landing",
   "version": "1.0.0",
-  "description": "GlyMonitor Landing Page",
+  "description": "Glymo Landing Page",
   "main": "index.html",
   "scripts": {
-    "dev": "concurrently \"npm run build:css\" \"npm run serve\"",
+    "start": "concurrently \"npm run build:css\" \"npm run serve\"",
     "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "serve": "live-server src --port=3000",
     "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
   },
-  "keywords": ["Diabetes", "Glucemia"],
+  "keywords": ["Nutrición", "Macros"],
   "author": "Santiago Gonzalo",
   "type": "commonjs",
   "devDependencies": {
